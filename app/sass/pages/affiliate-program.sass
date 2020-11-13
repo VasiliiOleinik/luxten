@@ -1,0 +1,118 @@
+.app-main-content__container.affiliateProg
+	width: 100%
+	display: flex
+	flex-direction: column
+	height: calc(100% - 60px)
+
+	& .affiliateProg-inform-block
+		width: 100%
+		display: flex
+		margin-bottom: 15px
+
+		& .inform-block-box
+			flex-direction: column
+			display: flex
+			width: 100%
+
+			&.half
+				width: calc(50% - 7.5px)
+				margin-right: 7.5px
+
+				&:last-of-type
+					margin-right: 0px
+					margin-left: 7.5px
+
+			& .content-block.half
+				width: 100%
+				flex-direction: row
+
+				& .content-block-box
+					width: calc(50% - 7.5px)
+					margin-right: 7.5px
+
+					& input
+						width: 100%
+
+					&.last-of-type
+						margin-right: 0px
+						margin-left: 7.5px
+
+			& .affiliateProg__info
+				font-style: normal
+				font-weight: 500
+				font-size: 13px
+				line-height: 16px
+				letter-spacing: 1px
+				color: #D6B87A
+				margin-bottom: 15px
+
+			& .affiliateProg__title
+				font-style: normal
+				font-weight: bold
+				font-size: 13px
+				line-height: 16px
+				letter-spacing: 1px
+				color: #D6B87A
+				margin-bottom: 15px
+				display: flex
+				flex-direction: column
+				width: 100%
+
+				& span
+					font-style: normal
+					font-weight: normal
+					font-size: 13px
+					line-height: 16px
+					letter-spacing: 1px
+					color: #E2E2E2
+
+				&.big
+					font-size: 14px
+					color: #fff
+
+			& .affiliateProg__text
+				display: flex
+				flex-direction: column
+				width: 100%
+				font-style: normal
+				font-weight: normal
+				font-size: 13px
+				line-height: 16px
+				letter-spacing: 1px
+				color: #E2E2E2
+				margin-bottom: 15px
+
+			& .affiliateProg__input
+				padding: 8px 11px
+				text-align: left
+				height: 40px
+				background: #CBCBCB
+				border-radius: 3px
+				font-style: normal
+				font-weight: 500
+				font-size: 20px
+				line-height: 24px
+				color: #333333
+				margin-bottom: 20px
+
+			& .copy-link
+				max-width: 231px
+				width: 100%
+				height: 40px
+				background: linear-gradient(169.03deg, #2B5300 -27.37%, #3C6A00 100%)
+				border-radius: 5px
+				font-style: normal
+				font-weight: bold
+				font-size: 13px
+				line-height: 16px
+				text-align: center
+				color: #FFFFFF
+
+.app-main-content__container.affiliateProg
+	& .content-block.light
+		& .affiliateProg__info,
+		& .affiliateProg__title,
+		& .affiliateProg__title span,
+		& .affiliateProg__title.big,
+		& .affiliateProg__text
+			color: $light-text !important

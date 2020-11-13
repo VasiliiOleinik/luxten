@@ -1,0 +1,294 @@
+.left-menu
+	width: 220px
+	height: calc(100vh - 90px)
+	box-shadow: 0px 2px 4px rgba(35, 36, 37, 0.07)
+	&.dark
+		background: $dark-sidebar
+		transition: .2s ease-in
+		& .theme
+			padding: 20px 10px 20px 23px
+			& .theme-name
+				margin: 0px 15px
+				font-style: normal
+				font-weight: 500
+				font-size: 13px
+				line-height: 16px
+				color: #F2F2F2
+				transition: .2s ease-in
+			& .toggleTheme
+				& input
+					position: absolute
+					z-index: -1
+					opacity: 0
+			& .customCheckbox
+				position: relative
+				cursor: pointer
+
+			& .customCheckbox:before
+				content: ''
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				left: 0
+				width: 24px
+				height: 12px
+				background: #FFFFFF
+				border-radius: 50px
+				transition: .2s
+
+			& .customCheckbox:after
+				content: ''
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				left: 0
+				width: 12px
+				height: 12px
+				background: #D6B87A
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+				border-radius: 50px
+				transition: .2s
+
+			& .toggleTheme input:checked + .customCheckbox:after
+				left: 13px
+		& .left-menu__nav
+			display: flex
+			width: 100%
+			flex-direction: column
+			align-items: flex-start
+			justify-content: flex-start
+
+			&-elem
+				width: 100%
+				display: flex
+				flex-direction: column
+				align-items: center
+
+				& .left-menu-mainLink
+					width: 100%
+					height: 100%
+					display: flex
+					align-items: center
+					padding: 0px 17px
+					border-left: 5px solid transparent
+					transition: .2s ease-in
+					height: 32px
+					position: relative
+
+					&:hover,
+					&.active
+						transition: .3s
+						border-color: #D6B87A
+						background: rgba(214, 184, 122, 0.2)
+
+						& span
+							transition: .3s
+							color: #ffffff
+						
+						& svg
+							& path
+								fill: $light-head
+								transition: .3s
+					&.isOpen
+						transition: .2s ease-in
+						border-color: #D6B87A
+						& span
+							transition: .3s
+							color: #ffffff
+						& .left-menu-arrow path
+							fill: #ffffff
+							transition: .3s
+
+					& .left-menu-arrow
+						position: absolute
+						right: 17px
+						top: 50%
+						transform: translateY(-50%)
+					& svg
+						margin-right: 10px
+
+					& span
+						font-style: normal
+						font-weight: 500
+						font-size: 13px
+						line-height: 16px
+						color: #969696
+						transition: .3s
+						transition: .2s ease-in
+
+				& .dropdown-list
+					display: none
+					width: 100%
+
+					& .dropdown-list-elem
+						width: 100%
+						display: flex
+
+						& a
+							display: flex
+							align-items: center
+							width: 100%
+							padding: 9px 10px 9px 32px
+							font-style: normal
+							font-weight: 500
+							font-size: 13px
+							line-height: 16px
+							color: #979797
+							transition: .2s ease-in
+
+							&:hover,
+							&.active
+								transition: .3s
+								color: #ffffff
+								background: rgba(214, 184, 122, 0.2)
+	&.light
+		background: $light-sidebar
+		transition: .2s ease-in
+		& .theme
+			padding: 20px 10px 20px 23px
+			& .theme-name
+				margin: 0px 15px
+				font-style: normal
+				font-weight: 500
+				font-size: 13px
+				line-height: 16px
+				color: #232425
+				transition: .2s ease-in
+			& .toggleTheme
+				& input
+					position: absolute
+					z-index: -1
+					opacity: 0
+			& .customCheckbox
+				position: relative
+				cursor: pointer
+
+			& .customCheckbox:before
+				content: ''
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				left: 0
+				width: 24px
+				height: 12px
+				background: #F2F3F5
+				border: 1px solid #C9C9C9
+				border-radius: 50px
+				transition: .2s
+
+			& .customCheckbox:after
+				content: ''
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				left: 0
+				width: 12px
+				height: 12px
+				background: #D6B87A
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+				border-radius: 50px
+				transition: .2s
+
+			& .toggleTheme input:checked + .customCheckbox:after
+				left: 13px
+		& .left-menu__nav
+			display: flex
+			width: 100%
+			flex-direction: column
+			align-items: flex-start
+			justify-content: flex-start
+
+			&-elem
+				width: 100%
+				display: flex
+				flex-direction: column
+				align-items: center
+
+				& .left-menu-mainLink
+					width: 100%
+					height: 100%
+					display: flex
+					align-items: center
+					padding: 0px 17px
+					border-left: 5px solid transparent
+					transition: .2s ease-in
+					height: 32px
+					position: relative
+
+					&:hover,
+					&.active
+						transition: .3s
+						border-color: #D6B87A
+						background: rgba(214, 184, 122, 0.2)
+
+						& span
+							transition: .3s
+							color: #232425
+							color: #232425
+					&.active
+						& svg
+							& path
+								fill: $light-head
+								transition: .3s
+
+					&.isOpen
+						transition: .3s
+						border-color: #D6B87A
+						& span
+							transition: .3s
+							color: #232425
+						& .left-menu-arrow path
+							fill: #232425
+							transition: .3s
+
+					& .left-menu-arrow
+						position: absolute
+						right: 17px
+						top: 50%
+						transform: translateY(-50%)
+					& svg
+						margin-right: 10px
+
+					& span
+						font-style: normal
+						font-weight: 500
+						font-size: 13px
+						line-height: 16px
+						color: #969696
+						transition: .2s ease-in
+
+				& .dropdown-list
+					display: none
+					width: 100%
+
+					& .dropdown-list-elem
+						width: 100%
+						display: flex
+
+						& a
+							display: flex
+							align-items: center
+							width: 100%
+							padding: 9px 10px 9px 32px
+							font-style: normal
+							font-weight: 500
+							font-size: 13px
+							line-height: 16px
+							color: #979797
+							transition: .2s ease-in
+
+							&:hover,
+							&.active
+								transition: .3s
+								color: #232425
+								background: rgba(214, 184, 122, 1)
+
+@include media( 1199 )
+	.left-menu
+		box-shadow: 0px 2px 4px rgba(35, 36, 37, .7)
+		position: fixed
+		z-index: 999999
+		right: -220px
+		top: 90px
+		transition: .3s
+		overflow: auto

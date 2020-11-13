@@ -1,0 +1,135 @@
+extends blocks/_app-layout
+append content
+	main.app-main
+		.main-content
+			include blocks/_left-menu
+			.app-main-content.dark
+				.app-main-content__header
+					h1(class="app-main-content__title") Отчеты
+					ul(class="app-breadcrumbs")
+						li(class="breadcrumb")
+							a(href="/" class="breadcrumb-link") Главная
+						li(class="breadcrumb-separator") /
+						li(class="breadcrumb")
+							a(href="javascript:void(0)" class="breadcrumb-link current") Отчеты
+				.app-main-content__container.reports
+					.head-block.dark История проведенных операций
+					.content-block.dark
+						.custom-table-container.scrollbar-rail
+							.custom-table-div(style="width:100%" id="reportsTable")
+								.table-header
+									.table-row
+										.table-cell Операция
+										.table-cell Сумма (USD)
+										.table-cell Остаток (USD)
+										.table-cell Дата
+										.table-cell Статус
+								.table-body
+									.table-row
+										.table-cell(align="left")  Зачисление средств со счета Z121212121
+										.table-cell(class="add" align="center")  +1000
+										.table-cell(class="upper" align="center")
+											img(src="img/upper.svg", alt="Upper" class="table-image")
+											| 1000
+										.table-cell(align="center")  21.12.2020
+										.table-cell
+											span(class="waiting") В ожидании
+									.table-row
+										.table-cell(align="left")  Вывод средств на счет Z121212121
+										.table-cell(class="remove" align="center")  -100
+										.table-cell(class="lower" align="center")
+											img(src="img/lower.svg", alt="Lower" class="table-image")
+											| 900
+										.table-cell(align="center")  21.12.2020
+										.table-cell
+											span(class="success") Зачислен
+									.table-row
+										.table-cell(align="left")  Зачисление процентов с инвестиции №8121928912
+										.table-cell(class="add" align="center")  +100
+										.table-cell(class="lower" align="center")
+											img(src="img/lower.svg", alt="Upper" class="table-image")
+											| 900
+										.table-cell(align="center")  21.12.2020
+										.table-cell
+											span(class="error") Отклонен
+									.table-row
+										.table-cell(align="left")  Зачисление средств со счета Z121212121
+										.table-cell(class="add" align="center")  +1000
+										.table-cell(class="upper" align="center")
+											img(src="img/upper.svg", alt="Upper" class="table-image")
+											| 1000
+										.table-cell(align="center")  21.12.2020
+										.table-cell
+											span(class="waiting") В ожидании
+									.table-row
+										.table-cell(align="left")  Вывод средств на счет Z121212121
+										.table-cell(class="remove" align="center")  -100
+										.table-cell(class="lower" align="center")
+											img(src="img/lower.svg", alt="Lower" class="table-image")
+											| 900
+										.table-cell(align="center")  21.12.2020
+										.table-cell
+											span(class="success") Заичслен
+									.table-row
+										.table-cell(align="left")  Зачисление процентов с инвестиции №8121928912
+										.table-cell(class="add" align="center")  +100
+										.table-cell(class="lower" align="center")
+											img(src="img/lower.svg", alt="Upper" class="table-image")
+											| 900
+										.table-cell(align="center")  21.12.2020
+										.table-cell
+											span(class="error") Отклонен
+									.table-row
+										.table-cell(align="left")  Зачисление средств со счета Z121212121
+										.table-cell(class="add" align="center")  +1000
+										.table-cell(class="upper" align="center")
+											img(src="img/upper.svg", alt="Upper" class="table-image")
+											| 1000
+										.table-cell(align="center")  21.12.2020
+										.table-cell
+											span(class="waiting") В ожидании
+									.table-row
+										.table-cell(align="left")  Вывод средств на счет Z121212121
+										.table-cell(class="remove" align="center")  -100
+										.table-cell(class="lower" align="center")
+											img(src="img/lower.svg", alt="Lower" class="table-image")
+											| 900
+										.table-cell(align="center")  21.12.2020
+										.table-cell
+											span(class="success") Заичслен
+									.table-row
+										.table-cell(align="left")  Зачисление процентов с инвестиции №8121928912
+										.table-cell(class="add" align="center")  +100
+										.table-cell(class="lower" align="center")
+											img(src="img/lower.svg", alt="Upper" class="table-image")
+											| 900
+										.table-cell(align="center")  21.12.2020
+										.table-cell
+											span(class="error") Отклонен
+									.table-row
+										.table-cell(align="left")  Зачисление средств со счета Z121212121
+										.table-cell(class="add" align="center")  +1000
+										.table-cell(class="upper" align="center")
+											img(src="img/upper.svg", alt="Upper" class="table-image")
+											| 1000
+										.table-cell(align="center")  21.12.2020
+										.table-cell
+											span(class="waiting") В ожидании
+									.table-row
+										.table-cell(align="left")  Вывод средств на счет Z121212121
+										.table-cell(class="remove" align="center")  -100
+										.table-cell(class="lower" align="center")
+											img(src="img/lower.svg", alt="Lower" class="table-image")
+											| 900
+										.table-cell(align="center")  21.12.2020
+										.table-cell
+											span(class="success") Заичслен
+									.table-row
+										.table-cell(align="left")  Зачисление процентов с инвестиции №8121928912
+										.table-cell(class="add" align="center")  +100
+										.table-cell(class="lower" align="center")
+											img(src="img/lower.svg", alt="Upper" class="table-image")
+											| 900
+										.table-cell(align="center")  21.12.2020
+										.table-cell
+											span(class="error") Отклонен

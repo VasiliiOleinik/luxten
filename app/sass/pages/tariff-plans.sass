@@ -1,0 +1,95 @@
+.app-main-content__container.tariffPlans
+	width: 100%
+	display: flex
+	flex-direction: column
+	height: calc(100% - 60px)
+
+	& .tariffPlans-container
+		width: 100%
+		display: flex
+
+		& .plan-card
+			width: 100%
+			margin-right: 15px
+
+			&.bronze
+				& .plan-card__info:before
+					background: linear-gradient(182.6deg, #986419 2.17%, rgba(61, 52, 41, 0) 353.62%)
+			&.silver
+				& .plan-card__info:before
+					background: linear-gradient(182.6deg, #B3B3B3 2.17%, rgba(61, 52, 41, 0) 353.62%)
+			&.gold
+				& .plan-card__info:before
+					background: linear-gradient(144.4deg, #D6B87A 20.86%, rgba(214, 184, 122, 0) 121.3%)
+
+			& .head-block
+				& span
+					font-size: 24px
+					margin-left: 10px
+				display: flex
+				align-items: center
+				justify-content: center
+
+			& .plan-card__info
+				width: 100%
+				display: flex
+				flex-direction: column
+				position: relative
+				margin-bottom: 20px
+				font-style: normal
+				font-weight: 300
+				font-size: 16px
+				line-height: 120%
+				letter-spacing: 0.01em
+				color: #D6B87A
+				padding-left: 15px
+
+				&:before
+					content: ''
+					width: 6px
+					height: 6px
+					border-radius: 50%
+					display: block
+					position: absolute
+					left: 0
+					top: 5px
+				& span
+					font-style: normal
+					font-weight: 600
+					font-size: 16px
+					line-height: 120%
+					letter-spacing: 0.01em
+					color: #E2E2E2
+			& .plan-card-link
+				background: linear-gradient(171.62deg, #2B5300 -27.37%, #3C6A00 100%)
+				border-radius: 5px
+				height: 40px
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 100%
+				font-style: normal
+				font-weight: bold
+				font-size: 13px
+				line-height: 16px
+				text-align: center
+				color: #FFFFFF
+
+				& span
+					font-weight: bold
+					margin-left: 10px
+
+			&:last-of-type
+				margin-right: 0px
+.head-block.light
+	& span.plan-title
+		background: none !important
+		color: $light-text !important
+		-webkit-background-clip: initial !important
+		-webkit-text-fill-color: $light-text !important
+.content-block.light
+	& .plan-card__info,
+	& .plan-card__info span,
+		color: $light-text !important
+	& .plan-card-link
+		background: rgba(57, 101, 0, .8) !important

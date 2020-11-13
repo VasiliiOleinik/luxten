@@ -1,0 +1,158 @@
+.custom-table-container
+	width: 100%
+	border-radius: 3px
+	& .table-image
+		margin-right: 5px
+	& .add
+		color: #396500
+	& .remove
+		color: #EA4335
+	& span
+		font-style: normal
+		font-weight: bold
+		font-size: 14px
+		line-height: 17px
+		text-align: center
+		color: #FFFFFF
+		opacity: 0.5
+		border-radius: 4px
+		display: flex
+		width: 100%
+		justify-content: center
+		align-items: center
+		height: 26px
+		&.waiting
+			background: rgba(188, 119, 19, 0.7)
+		&.success
+			background: rgba(57, 101, 0, 0.7)
+		&.error
+			background: rgba(240, 71, 53, 0.7)
+	& .table-btn
+		max-width: 167px
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		font-style: normal
+		font-weight: bold
+		font-size: 13px
+		line-height: 16px
+		text-align: center
+		height: 30px
+		border-radius: 5px
+		margin: 0 auto
+
+		&.green
+			color: #FFFFFF
+			background: linear-gradient(168.26deg, #2B5300 -27.37%, #3C6A00 100%)
+	& table
+		& .table-header
+			width: 100%
+			& th
+				background: #2D2D32
+				border: 1px solid #232324
+				box-sizing: border-box
+				font-style: normal
+				font-weight: 600
+				font-size: 12px
+				line-height: 15px
+				text-align: center
+				letter-spacing: 1px
+				text-transform: uppercase
+				color: #D6B87A
+				padding: 10px 18px
+				background-repeat: no-repeat
+				background-position: center right
+				min-width: 140px
+				&:last-of-type
+					border-radius: 0px 5px 0px 0px
+				&:first-of-type
+					border-radius: 5px 0px 0px 0px
+			& div
+				word-wrap: break-word
+		& .table-body
+			& table
+				& tr:last-of-type
+					& td:last-of-type
+						border-radius: 0px 0px 5px 0px
+					& td:first-of-type
+						border-radius: 0px 0px 0px 5px
+				& td
+					min-width: 140px
+					border: 1px solid #999 !important
+					padding: 8px 10px
+					background: #F2F3F5
+					vertical-align: middle
+					word-wrap: break-word
+					& div
+						word-wrap: break-word
+
+///////////////////////////
+.custom-table-div
+	width: 100%
+	display: flex
+	flex-direction: column
+
+	& .table-row
+		display: flex
+		width: 100%
+
+	& .table-header
+		display: flex
+		width: 100%
+		flex-direction: column
+		position: sticky
+		top: 0
+		left: 0
+		z-index: 999
+		& .table-row
+			&:first-of-type
+				& .table-cell:first-of-type
+					border-radius: 3px 0px 0px 0px
+				& .table-cell:last-of-type
+					border-radius: 0px 3px 0px 0px
+			& .table-cell
+				flex-shrink: 0
+				display: flex
+				align-items: center
+				border: 1px solid #232324
+				box-sizing: border-box
+				font-style: normal
+				font-weight: 600
+				font-size: 12px
+				line-height: 15px
+				text-align: center
+				letter-spacing: 1px
+				text-transform: uppercase
+				color: #D6B87A
+				padding: 15px 18px
+				background-repeat: no-repeat
+				background-position: center right
+				min-width: 140px
+				background: #2D2D32
+				justify-content: center
+				word-break: break-word
+	& .table-body
+		display: flex
+		width: 100%
+		flex-direction: column
+		position: sticky
+		left: 0
+		& .table-row
+			&:last-of-type
+				& .table-cell:first-of-type
+					border-radius: 0px 0px 0px 3px
+				& .table-cell:last-of-type
+					border-radius: 0px 0px 3px 0px
+			& .table-cell
+				min-width: 140px
+				border: 1px solid #999 !important
+				padding: 15px 10px
+				background: #F2F3F5
+				vertical-align: middle
+				word-wrap: break-word
+				flex-shrink: 0
+				display: flex
+				align-items: center
+				word-break: break-word
+				justify-content: center

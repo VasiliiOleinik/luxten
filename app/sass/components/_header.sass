@@ -1,0 +1,53 @@
+.header
+	height: 60px
+	width: 100%
+	margin-top: 30px
+	margin-bottom: 25px
+
+	&__body
+		display: flex
+		align-items: flex-end
+		justify-content: space-between
+		width: 100%
+
+	&__navig
+		display: flex
+		align-items: flex-end
+		color: #ffffff
+		font-style: normal
+		font-weight: 600
+		font-size: 13px
+		line-height: 16px
+
+		&-link
+			margin-left: 20px
+			transition: .2s ease-in
+
+			&:hover
+				color: #D6B87A
+				transition: .2s ease-in
+
+			& span
+				margin-left: 5px
+@include media( 1199 )
+	.app-header
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 99999
+		width: 100%
+@include media( 767 )
+	.header__navig
+		position: absolute
+		top: 90%
+		left: 50%
+		transform: translateX(-50%)
+		display: flex
+		width: 100%
+		justify-content: center
+		background: rgba(0, 0, 0, 0.4)
+		padding: 10px 0px
+	.header__navig-link.register
+		margin-left: 0px
+	.header__body
+		justify-content: center

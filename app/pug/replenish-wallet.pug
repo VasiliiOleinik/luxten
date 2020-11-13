@@ -1,0 +1,100 @@
+extends blocks/_app-layout
+append content
+	main.app-main
+		.main-content
+			include blocks/_left-menu
+			.app-main-content.dark
+				.app-main-content__header
+					h1(class="app-main-content__title") Пополнить кошелек
+					ul(class="app-breadcrumbs")
+						li(class="breadcrumb")
+							a(class="breadcrumb-link" href="/") Главная
+						li(class="breadcrumb-separator") /
+						li(class="breadcrumb")
+							a(class="breadcrumb-link" href="/") Кошелек
+						li(class="breadcrumb-separator") /
+						li(class="breadcrumb")
+							a(class="breadcrumb-link current" href="javascript:void(0)") Пополнить кошелек
+				.app-main-content__container.replenishWallet
+					.replenishWallet-inform-block
+						.head-block.dark Платежная системы для пополнения баланса аккаунта
+						.content-block.dark
+							.custom-table-container.scrollbar-rail.replenishTable
+								.custom-table-div(style="width:100%" id="replenishTable")
+									.table-header
+										.table-row
+											.table-cell Платежная система
+											.table-cell Комиссия систем
+											.table-cell Срок перевода
+											.table-cell Выполнить
+									.table-body
+										.table-row
+											.table-cell WebMoney  WMZ- кошелек
+											.table-cell 0%
+											.table-cell Моментально
+											.table-cell
+												a(class="table-btn green" data-fancybox data-src="#replenish-wallet" href="javascript:;") Пополнить
+						.wallet-modal.dark(id="replenish-wallet" style="display: none;")
+							.wallet-modal-content
+								.head-block.dark Пополнить баланс через WebMoney
+								.content-block.dark
+									.wallet-modal__info
+										span(class="wallet-modal__info-title") Информация к прочтению
+										span(class="wallet-modal__info-text")  Вводим желаемую сумму и переходим к оплате счёта<br>
+											| Минимальный размер пополнения: 50 USD.<br> Комиссия платежнего шлюза: 0%<br>
+											| Время исполнения: моментально<br>
+									span(class="wallet-modal__title") Вы можете сделать депозит на сумму от 50 до 1 000 000 000 USD.
+									.wallet-modal__input-summ
+										form(id="fillUpPurse" action="")
+											span Введите сумму пополнения:
+											input(class="onlyDigits" type="text")
+											span(class="walletPursheError")
+											button(type="submit") Пополнить
+					.replenishWallet-inform-block
+						.head-block.dark История пополнения баланса
+						.content-block.dark
+							.custom-table-container.scrollbar-rail
+								.custom-table-div(style="width:100%" id="replenishHistory")
+									.table-header
+										.table-row
+											.table-cell Источник
+											.table-cell Сумма(USD)
+											.table-cell Номер транзакции
+											.table-cell Дата
+											.table-cell Статус
+									.table-body
+										.table-row
+											.table-cell Вывод средств на счет Z121212121
+											.table-cell 100
+											.table-cell 1215251hgsgf2131
+											.table-cell 21.12.2020
+											.table-cell
+												span(class="success") Зачислен
+										.table-row
+											.table-cell % c инвестиции  № 1234565
+											.table-cell 10000
+											.table-cell 1215251hgsgf2131
+											.table-cell 21.12.2020
+											.table-cell
+												span(class="error") Отклонен
+										.table-row
+											.table-cell WebMoney  WMZ- кошелек
+											.table-cell 10000
+											.table-cell 12881281jj
+											.table-cell 21.12.2020
+											.table-cell
+												span(class="waiting") Отклонен
+										.table-row
+											.table-cell WebMoney  WMZ- кошелек
+											.table-cell 100
+											.table-cell 1215251hgsgf2131
+											.table-cell 21.12.2020
+											.table-cell
+												span(class="waiting") Отклонен
+										.table-row
+											.table-cell % c инвестиции  № 1234565
+											.table-cell 10000
+											.table-cell 1215251hgsgf2131
+											.table-cell 21.12.2020
+											.table-cell
+												span(class="waiting") Отклонен

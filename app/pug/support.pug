@@ -1,0 +1,33 @@
+extends blocks/_app-layout
+append content
+	main.app-main
+		.main-content
+			include blocks/_left-menu
+			.app-main-content.dark
+				.app-main-content__header
+					h1(class="app-main-content__title") Служба поддержки
+					ul(class="app-breadcrumbs")
+						li(class="breadcrumb")
+							a(href="/" class="breadcrumb-link") Главная
+						li(class="breadcrumb-separator") /
+						li(class="breadcrumb")
+							a(href="javascript:void(0)" class="breadcrumb-link current") Служба поддержки
+				.app-main-content__container.support
+					.head-block.dark Создание обращения в службу поддержки
+					.content-block.dark
+						span(class="support-info") Опишите нам свою проблему и мы ответим Вам  ближайшее время на почту указаную в обращении.
+						form(action="" id="support-form")
+							.support-row
+								.auth-content__label.support-name
+									p(class="input-name") Ваше имя:
+									input(type="text" id="name" name="name" placeholder="Ваше имя")
+								.auth-content__label.support-phone
+									p(class="input-name") Телефон:
+									input(type="text" id="phone" name="phone" placeholder="")
+								.auth-content__label.support-email
+									p(class="input-name") Email:
+									input(type="text" id="email" name="email" placeholder="Email")
+							.auth-content__label
+								p(class="input-name") Ваше обращение:
+								textarea(id="supportMessage" name="supportMessage" placeholder="Добрый день")
+							button(type="submit" class="green-btn") Отправить

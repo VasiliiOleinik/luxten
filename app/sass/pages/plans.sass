@@ -1,0 +1,186 @@
+.main-content.plans
+	text-align: center
+
+	& .plans-page__title
+		font-style: normal
+		font-weight: bold
+		font-size: 35px
+		line-height: 119%
+		letter-spacing: 0.02em
+		color: #E2E2E2
+		margin-bottom: 20px
+
+	& .plans-page__subtitle
+		font-style: normal
+		font-weight: 500
+		font-size: 16px
+		line-height: 20px
+		text-align: center
+		letter-spacing: 0.02em
+		color: #E2E2E2
+		margin-bottom: 20px
+
+	& .plans-page__plans
+		display: flex
+		align-items: flex-start
+		margin-bottom: 30px
+
+		& .plan-card
+			width: 100%
+			background: #222020
+			box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25)
+			border-radius: 6px
+			margin-right: 30px
+			display: flex
+			justify-content: center
+			padding: 33px 45px
+			flex-direction: column
+			align-items: center
+
+			&:last-of-type
+				margin-right: 0px
+
+			&.bronze
+				& .plan-card__info:before
+					content: ''
+					position: absolute
+					z-index: 1
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					display: block
+					width: 110%
+					height: 100%
+					border-radius: 50%
+					background: linear-gradient(180deg, #986419 0%, rgba(152, 100, 25, 0) 100%)
+			&.silver
+				& .plan-card__info:before
+					content: ''
+					position: absolute
+					z-index: 1
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					display: block
+					width: 110%
+					height: 100%
+					border-radius: 50%
+					background: linear-gradient(180deg, #EEEEEE 0%, rgba(238, 238, 238, 0) 100%)
+
+			&.gold
+				& .plan-card__info:before
+					content: ''
+					position: absolute
+					z-index: 1
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					display: block
+					width: 110%
+					height: 100%
+					border-radius: 50%
+					background: linear-gradient(144.4deg, #D6B87A 20.86%, rgba(214, 184, 122, 0) 121.3%)
+
+
+			&__title
+				margin-bottom: 30px
+				font-style: normal
+				font-weight: bold
+				font-size: 30px
+				line-height: 119%
+				text-align: center
+				letter-spacing: 0.02em
+				text-transform: uppercase
+				text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+				&.bronze
+					background: linear-gradient(to bottom,rgba(152, 100, 25, 1) 0%, rgba(152, 100, 25, 0) 100%)
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(152, 100, 25, 1)', endColorstr='rgba(152, 100, 25, 0)', GradientType=1 )
+					display: inline-block
+					-webkit-background-clip: text
+					-webkit-text-fill-color: transparent
+				&.silver
+					background: linear-gradient(to bottom,rgba(238, 238, 238, 1) 0%, rgba(238, 238, 238, 0) 100%)
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(238, 238, 238, 1)', endColorstr='rgba(238, 238, 238, 0)', GradientType=1 )
+					display: inline-block
+					-webkit-background-clip: text
+					-webkit-text-fill-color: transparent
+				&.gold
+					background: linear-gradient(to bottom,rgba(214, 184, 122, 1) 0%, rgba(214, 184, 122, 0) 100%)
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(214, 184, 122, 1)', endColorstr='rgba(214, 184, 122, 0)', GradientType=1 )
+					display: inline-block
+					-webkit-background-clip: text
+					-webkit-text-fill-color: transparent
+
+			&__info
+				position: relative
+				&-content
+					background: #292828
+					box-shadow: 0px 4px 84px rgba(0, 0, 0, 0.25)
+					border-radius: 6px
+					width: 100%
+					display: flex
+					flex-direction: column
+					padding: 30px
+					position: relative
+					z-index: 2
+
+				&-text
+					font-style: normal
+					font-weight: 300
+					font-size: 16px
+					line-height: 119%
+					text-align: center
+					letter-spacing: 0.02em
+					color: #FFFFFF
+					margin-bottom: 45px
+
+					&:last-of-type
+						margin-bottom: 0px
+	& .main-button
+		margin: 0 auto
+		margin-bottom: 30px
+
+span.plan-title
+	font-style: normal
+	font-weight: bold
+	font-size: 30px
+	line-height: 119%
+	text-align: center
+	letter-spacing: 0.02em
+	text-transform: uppercase
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+	&.bronze
+		background: linear-gradient(to bottom,rgba(152, 100, 25, 1) 0%, rgba(152, 100, 25, 0) 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(152, 100, 25, 1)', endColorstr='rgba(152, 100, 25, 0)', GradientType=1 )
+		display: inline-block
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+	&.silver
+		background: linear-gradient(to bottom,rgba(238, 238, 238, 1) 0%, rgba(238, 238, 238, 0) 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(238, 238, 238, 1)', endColorstr='rgba(238, 238, 238, 0)', GradientType=1 )
+		display: inline-block
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+	&.gold
+		background: linear-gradient(to bottom,rgba(214, 184, 122, 1) 0%, rgba(214, 184, 122, 0) 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(214, 184, 122, 1)', endColorstr='rgba(214, 184, 122, 0)', GradientType=1 )
+		display: inline-block
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+
+@include media( 1199 )
+	.main-content.plans .plans-page__plans
+		flex-wrap: wrap
+		justify-content: center
+	.main-content.plans .plans-page__plans .plan-card
+		width: 45%
+
+@include media( 767 )
+	.main-content.plans .plans-page__plans .plan-card
+		width: 100%
+		margin-bottom: 30px
+		margin-right: 0px
+
+@include media( 450 )
+	.main-content.plans .plans-page__plans .plan-card
+		padding: 25px

@@ -1,0 +1,93 @@
+extends blocks/_app-layout
+append content
+	main.app-main
+		.main-content
+			include blocks/_left-menu
+			.app-main-content.dark
+				.app-main-content__header
+					h1(class="app-main-content__title") Моя команда
+					ul(class="app-breadcrumbs")
+						li(class="breadcrumb")
+							a(href="/" class="breadcrumb-link") Главная
+						li(class="breadcrumb-separator") /
+						li(class="breadcrumb")
+							a(href="/" class="breadcrumb-link") Команда
+						li(class="breadcrumb-separator") /
+						li(class="breadcrumb")
+							a(href="javascript:void(0)" class="breadcrumb-link current") Список команды
+				.app-main-content__container.teamList
+					.teamList-inform-block
+						.inform-main-box
+							.inform-box
+								.head-block.dark Общий доход от команды
+								.content-block.dark
+									.section-info
+										img(src="img/diagram.svg", alt="Withdraw")
+										span(class="section-info__text") 40190,00
+										span(class="section-info__dollar") ₽
+							.inform-box
+								.head-block.dark Доход от партнёров 1 уровня
+								.content-block.dark
+									.section-info
+										img(src="img/procent.svg", alt="Diagram")
+										span(class="section-info__text") 40190,00
+										span(class="section-info__dollar") ₽
+							.inform-box
+								.head-block.dark Доход от партнёров 2 уровня
+								.content-block.dark
+									.section-info
+										img(src="img/coins.svg", alt="Referals")
+										span(class="section-info__text") 40190,00
+										span(class="section-info__dollar") ₽
+						.teamList-inform-table
+							.head-block.dark Список команды
+							.content-block.dark
+								.custom-table-container.scrollbar-rail
+									.custom-table-div(style="width:100%" id="teamList")
+										.table-header
+											.table-row
+												.table-cell Имя
+												.table-cell Логин
+												.table-cell Регистрация
+												.table-cell Доход от партнера (USD)
+										.table-body
+											.table-row
+												.table-cell Александр  (1 ур.)
+												.table-cell ALesandr201991911
+												.table-cell 23.10.2019
+												.table-cell  1 233 000 000 123
+											.table-row
+												.table-cell Александр  (1 ур.)
+												.table-cell ALesandr201991911
+												.table-cell 23.10.2019
+												.table-cell 1 233 000 000 123
+											.table-row
+												.table-cell Александр  (1 ур.)
+												.table-cell ALesandr201991911
+												.table-cell 23.10.2019
+												.table-cell 1 233 000 000 123
+											.table-row
+												.table-cell Александр  (1 ур.)
+												.table-cell ALesandr201991911
+												.table-cell 23.10.2019
+												.table-cell 1 233 000 000 123
+											.table-row
+												.table-cell Александр  (1 ур.)
+												.table-cell ALesandr201991911
+												.table-cell 23.10.2019
+												.table-cell 1 233 000 000 123
+											.table-row
+												.table-cell Александр  (1 ур.)
+												.table-cell ALesandr201991911
+												.table-cell 23.10.2019
+												.table-cell 1 233 000 000 123
+											.table-row
+												.table-cell Александр  (1 ур.)
+												.table-cell ALesandr201991911
+												.table-cell 23.10.2019
+												.table-cell 1 233 000 000 123
+											.table-row
+												.table-cell Александр  (1 ур.)
+												.table-cell ALesandr201991911
+												.table-cell 23.10.2019
+												.table-cell 1 233 000 000 123

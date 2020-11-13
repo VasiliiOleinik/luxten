@@ -1,0 +1,119 @@
+extends blocks/_app-layout
+append content
+	main.app-main
+		.main-content
+			include blocks/_left-menu
+			.app-main-content.dark
+				.app-main-content__header
+					h1(class="app-main-content__title") Инвестиции
+					ul(class="app-breadcrumbs")
+						li(class="breadcrumb")
+							a(href="/" class="breadcrumb-link") Главная
+						li(class="breadcrumb-separator") /
+						li(class="breadcrumb")
+							a(href="/" class="breadcrumb-link current") Инвестиции
+						li(class="breadcrumb-separator") /
+						li(class="breadcrumb")
+							a(href="/" class="breadcrumb-link current") Инвестировать сейчас
+				.app-main-content__container.investNow
+					.investNow-box
+						.head-block.dark Инвестировать сейчас
+						.content-block.invest.dark
+							.investNow-balance
+								span(class="investNow-balance__text") Ваш баланс (USD):
+								input(type="text" class="investNow-balance__info " id="investBalanceInfo"  value="4 011 111 119 110,000 000 000 0001" readonly)
+							.investNow-plans
+								span(class="investNow-plans__title") Выберите тарифный план ивестирования:
+								.investNow-plans-list
+									label.investNow-plan-elem.active(for="bronze")
+										input(type="radio" name="plan" id="bronze")
+										.plan-elem__name
+											span(class="name-text bronze") Bronze
+											span(class="planElem-status")
+										.plan-elem-list
+											.plan-elem-list__item.bronze Сумма инвестирования от 
+												span(class="investFrom") 50
+												| $ до 
+												span(class="investTo") 10000
+												| $.
+											.plan-elem-list__item.bronze Ежемесячный процент - 
+												span(class="investProcent") 7
+												| % от суммы инвестиции 
+											.plan-elem-list__item.bronze Срок инвестирования 
+												span(class="investPeriod") 12 
+												| месяцев
+											.plan-elem-list__item.bronze Сумма инвестиции возвращается по истечении 12 месяцев.
+										button(type="button" class="plan-elem-btn") Выбран
+									label.investNow-plan-elem(for="silver")
+										input(type="radio" name="plan" id="silver")
+										.plan-elem__name
+											span(class="name-text silver") Silver
+											span(class="planElem-status")
+										.plan-elem-list
+											.plan-elem-list__item.silver Сумма инвестирования от 
+												span(class="investFrom") 10001
+												| $ до 
+												span(class="investTo") 50000
+												| $.
+											.plan-elem-list__item.silver Ежемесячный процент - 
+												span(class="investProcent") 8
+												| % от суммы инвестиции 
+											.plan-elem-list__item.silver Срок инвестирования 
+												span(class="investPeriod") 12 
+												| месяцев
+											.plan-elem-list__item.silver Сумма инвестиции возвращается по истечении 12 месяцев.
+										button(type="button" class="plan-elem-btn") Выбрать
+									label.investNow-plan-elem(for="gold")
+										input(type="radio" name="plan" id="gold")
+										.plan-elem__name
+											span(class="name-text gold") Gold
+											span(class="planElem-status")
+										.plan-elem-list
+											.plan-elem-list__item.gold Сумма инвестирования от 
+												span(class="investFrom") 50001
+												| $ до бесконечности
+											.plan-elem-list__item.gold Ежемесячный процент - 
+												span(class="investProcent") 9
+												| % от суммы инвестиции 
+											.plan-elem-list__item.gold Срок инвестирования 
+												span(class="investPeriod") 12 
+												| месяцев
+											.plan-elem-list__item.gold Сумма инвестиции возвращается по истечении 12 месяцев.
+										button(type="button" class="plan-elem-btn") Выбрать
+							.investNow-input-summ
+								span(class="input-summ__text") Введите сумму для инвестирования:
+								.input-summ__block
+									input(type="text" class="input-summ__block-input onlyDigits" id="investSumm" )
+									button(type="button" class="input-summ__block-btn") + Инвестировать
+									p(class="input-summ__block-info") Вы можете иветсировать от 
+										span(class="inputFrom") 50
+										|$ до 
+										span(class="inputTo") 10000
+										|$
+					.investNow-box.calc
+						.head-block.dark Калькулятор инвестиции
+						.content-block.dark
+							.investNow-calc-section
+								span(class="calc-section__title") Сумма инвестиции:
+								.section-info
+									img(src="img/coins.svg", alt="Coins")
+									span(id="yourInvestSumm" class="section-info__text") 0
+									span(class="section-info__dollar") $
+							.investNow-calc-section
+								span(class="calc-section__title") Прибыль за 1 месяц:
+								.section-info
+									img(src="img/diagram.svg", alt="Diagram")
+									span(id="yourProfit" class="section-info__text") 0
+									span(class="section-info__dollar") $
+							.investNow-calc-section
+								span(class="calc-section__title") Ежемесячный процент:
+								.section-info
+									img(src="img/procent.svg", alt="Procent")
+									span(id="yourProcent" class="section-info__text") 7
+									span(class="section-info__dollar") %
+							.investNow-calc-section
+								span(class="calc-section__title") Сумма на выходе:
+								.section-info
+									img(src="img/coins.svg", alt="Coins")
+									span(id="yourTotalSumm" class="section-info__text") 0
+									span(class="section-info__dollar") $

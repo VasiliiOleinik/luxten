@@ -1,0 +1,70 @@
+extends blocks/_app-layout
+append content
+	main.app-main
+		.main-content
+			include blocks/_left-menu
+			.app-main-content.dark
+				.app-main-content__header
+					h1(class="app-main-content__title") Мой профиль
+					ul(class="app-breadcrumbs")
+						li(class="breadcrumb")
+							a(href="/" class="breadcrumb-link") Главная
+						li(class="breadcrumb-separator") /
+						li(class="breadcrumb")
+							a(href="/" class="breadcrumb-link current") Кошелек
+				.app-main-content__container.profile
+					.profile-box
+						.head-block.dark Личные данные
+						.content-block.dark
+							form(action="" id="personalData")
+								.auth-content__label.profile-avatar
+									p(class="input-name") Фото на аватар:
+									label(for="download-avatar" class="upload-image")
+										img(src="img/no-photo.svg" class="uploaded-image")
+										span Загрузить
+									input(id="download-avatar" type="file" class="upload-image-input" value="")
+								.auth-content__label.profile-passport
+									p(class="input-name required") Паспорт:
+										span *
+									label(for="download-passport" class="upload-image" )
+										img(src="img/no-photo.svg" class="uploaded-image" )
+										span Загрузить
+									input(id="download-passport" type="file" class="upload-image-input" value="" name="profiePassport")
+								.auth-content__label.profile-dob
+										p(class="input-name required") Дата рождения:
+											span *
+										input(type="text" id="dob" name="dob" placeholder="04/12/1980")
+								.auth-content__label
+										p(class="input-name required") Фамилия
+											span *
+										input(type="text" id="surname" name="surname" placeholder="Ваша фамилия")
+								.auth-content__label.profile-name
+										p(class="input-name") Имя
+										input(type="text" id="name" name="name" placeholder="Ваше имя")
+								.auth-content__label.profile-surname
+										p(class="input-name") Отчество
+										input(type="text" id="secondName" name="secondName" placeholder="Ваше отчество")
+								button(type="submit" class="green-btn") Сохранить
+					.profile-box
+						.head-block.dark Данные для авторизации и вывода средств
+						.content-block.dark
+							form(action="" id="authorizationData")
+								.auth-content__label.profile-phone
+									span(class="input-name") Номер телефона:
+									input(type="text" id="phone" name="phone" placeholder="")
+								.auth-content__label.profile-email
+									span(class="input-name") Email:
+									input(type="text" id="email" name="email" placeholder="mail@mail.ru")
+								.auth-content__label
+									span(class="input-name") Старый пароль:
+									input(type="password" id="oldPassword" name="oldPassword" placeholder="*****" autocomplete)
+								.auth-content__label
+									span(class="input-name") Новый пароль:
+									input(type="password" id="password" name="password" placeholder="*****" autocomplete)
+								.auth-content__label
+									span(class="input-name") Подтверждение пароля:
+									input(type="password" id="newPassword" name="newPassword" placeholder="*****" autocomplete)
+								.auth-content__label
+									span(class="input-name") Номер кошелька WebMoney для вывода средств:
+									input(type="text" id="webMoney" name="webMoney" placeholder="Z1261271627128121")
+								button(type="submit" class="green-btn") Сохранить

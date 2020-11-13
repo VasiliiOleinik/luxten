@@ -1,0 +1,120 @@
+extends blocks/_app-layout
+append content
+	main.app-main
+		.main-content
+			include blocks/_left-menu
+			.app-main-content.dark
+				.app-main-content__header
+					h1(class="app-main-content__title") Мои инвестиции
+					ul(class="app-breadcrumbs")
+						li(class="breadcrumb")
+							a(class="breadcrumb-link" href="/") Главная
+						li(class="breadcrumb-separator") /
+						li(class="breadcrumb")
+							a(class="breadcrumb-link" href="/") Инвестиции
+						li(class="breadcrumb-separator") /
+						li(class="breadcrumb")
+							a(class="breadcrumb-link current" href="javascript:void(0)") Мои инвестиции
+				.app-main-content__container.investMy
+					.investMy-inform-block
+						.inform-main-box
+							.head-block.dark Ваш баланс
+							.content-block.dark
+								.investMy-fordable-balance
+									p(class="fordable-balance__title") Ваш доступный баланс (USD):
+									input(id="myBalanse",type="text",readonly,value="4 011 111 119 110,000 000 000 0001")
+									span(class="fordable-balance__info") Доступные средства - это сумма на вашем персональном балансе, которая доступна как для вывода так и для инветсирования.
+									a(class="fordable-balance__btn" href="replenish-wallet.html") Пополнить баланс
+									a(class="fordable-balance__btn" href="withdraw-funds.html") Вывести средства
+									a(class="fordable-balance__btn invest",href="invest-now.html") Создать новую инвестицию
+						.inform-box-container
+							.inform-block-row
+								.inform-box
+									.head-block.dark Всего пополнено
+									.content-block.dark
+										.section-info
+											img(src="img/admission.svg", alt="Admission")
+											span(class="section-info__text") 40190,00
+											span(class="section-info__dollar") $
+								.inform-box
+									.head-block.dark Всего выведено
+									.content-block.dark
+										.section-info
+											img(src="img/withdraw.svg", alt="Withdraw")
+											span(class="section-info__text") 40190,00
+											span(class="section-info__dollar") $
+							.inform-block-row
+								.inform-box
+									.head-block.dark Активные инвестиции
+									.content-block.dark
+										.section-info
+											img(src="img/diagram.svg", alt="Diagram")
+											span(class="section-info__text") 40190,00
+											span(class="section-info__dollar") $
+								.inform-box
+									.head-block.dark Всего реферальных
+									.content-block.dark
+										.section-info
+											img(src="img/referals.svg", alt="Referals")
+											span(class="section-info__text") 40190,00
+											span(class="section-info__dollar") $
+					.investMy-inform-table
+						.head-block.dark Список активных и зыкрытых депозитов
+						.content-block.dark
+							.custom-table-container.scrollbar-rail
+								.custom-table-div(style="width:100%" id="investMyTable")
+									.table-header
+										.table-row
+											.table-cell Номер
+											.table-cell Дата начала
+											.table-cell Окончание
+											.table-cell %, прибыль
+											.table-cell Заработано (USD)
+											.table-cell Период
+											.table-cell Статус
+									.table-body
+										.table-row
+											.table-cell №1213131313131313
+											.table-cell 21/12/2019
+											.table-cell 21/12/2020
+											.table-cell 7
+											.table-cell 342332232233232322323
+											.table-cell 21/09/19
+											.table-cell
+												span(class="success") Активна
+										.table-row
+											.table-cell №1213131313131313
+											.table-cell 21/12/2019
+											.table-cell 1/12/2020
+											.table-cell 9
+											.table-cell 10000000992921
+											.table-cell 2011/07/25
+											.table-cell
+												span(class="waiting") Закрыта
+										.table-row
+											.table-cell №1213131313131313
+											.table-cell 21/12/2019
+											.table-cell 1/12/2020
+											.table-cell 9
+											.table-cell 10000000992921
+											.table-cell 2011/07/25
+											.table-cell
+												span(class="waiting") Закрыта
+										.table-row
+											.table-cell №1213131313131313
+											.table-cell 21/12/2019
+											.table-cell 1/12/2020
+											.table-cell 9
+											.table-cell 10000000992921
+											.table-cell 2011/07/25
+											.table-cell
+												span(class="error") Закрыта
+										.table-row
+											.table-cell №1213131313131313
+											.table-cell 21/12/2019
+											.table-cell 1/12/2020
+											.table-cell 9
+											.table-cell 10000000992921
+											.table-cell 2011/07/25
+											.table-cell
+												span(class="error") Закрыта

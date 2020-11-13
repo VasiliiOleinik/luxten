@@ -1,0 +1,68 @@
+.app-main-content__container.profile
+	width: 100%
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
+	height: calc(100% - 60px)
+
+	& .content-block
+		height: auto
+		@include maxHeight ( 800 )
+			height: 100%
+
+	& .profile-box
+		width: 49%
+		height: calc(100% - 35px)
+		@include maxHeight ( 840 )
+			height: 70vh
+		& .auth-content__label
+			margin-bottom: 2%
+
+			&.profile-phone
+				max-width: 37%
+				margin-right: 15px
+			&.profile-email
+				width: calc(100% - 37% - 15px)
+			&.profile-avatar
+				max-width: 180px
+				display: flex
+				justify-content: flex-start
+				align-items: flex-start
+				flex-direction: column
+				height: 150px
+			&.profile-passport
+				width: calc(100% - 180px)
+				display: flex
+				justify-content: flex-start
+				align-items: flex-start
+				flex-direction: column
+				height: 150px
+			&.profile-name
+				width: calc(50% - 5px)
+				margin-right: 5px
+			&.profile-surname
+				width: calc(50% - 5px)
+				margin-left: 5px
+			&.profile-dob
+				max-width: 155px
+			& .input-name
+				margin-bottom: 10px
+
+				&.required span
+					color: #EB5757
+			& input
+				background: #FFFFFF
+				border-radius: 3px
+				height: 40px
+				color: #333333
+
+		& form
+			display: flex
+			flex-wrap: wrap
+.content-block.light
+	& .upload-image span
+		color: $light-text
+body.light .app-main-content__container.profile .profile-box .auth-content__label input
+	background: rgba(203, 203, 203, 0.2) !important
+	border: 1px solid #C9CACD !important
+	transition: .2s ease-in !important

@@ -1,0 +1,45 @@
+extends blocks/_layout
+append content
+	-
+		var plans = [
+			{
+				name: 'bronze',
+				summFrom: '50',
+				summTo: '10000',
+				procent: '7',
+			},
+			{
+				name: 'silver',
+				summFrom: '100001',
+				summTo: '50000',
+				procent: '8 ',
+			},
+			{
+				name: 'gold',
+				summFrom: '500001',
+				summTo: 'бесконечности',
+				procent: '9',
+			}
+		];
+	main.main
+		.box
+			.main-content.plans
+				h1(class="plans-page__title") Тарифные планы:
+				h3(class="plans-page__subtitle") Создайте аккаунт, чтобы начать инвестировать
+				.plans-page__plans
+					each item in plans
+						.plan-card(class=item.name)
+							span.plan-card__title(class=item.name)=item.name
+							.plan-card__info
+								.plan-card__info-content
+									p(class="plan-card__info-text") Сумма инвестирования от 
+										span=item.summFrom
+										|$ до 
+										span=item.summTo
+										|$.
+									p(class="plan-card__info-text") Ежемесячный процент 
+										span=item.procent
+										|% от суммы инвестиции.
+									p(class="plan-card__info-text")  Срок инвестирования 12 месяцев.
+									p(class="plan-card__info-text")  Сумма инвестиции возвращается по истечении 12 месяцев.
+				a(class="main-button active " href="register.html") НАЧАТЬ ИНВЕСТИРОВАТЬ

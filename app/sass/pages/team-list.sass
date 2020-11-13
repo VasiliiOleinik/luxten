@@ -1,0 +1,44 @@
+.app-main-content__container.teamList
+	width: 100%
+	display: flex
+	flex-direction: column
+	height: calc(100% - 60px)
+	& .teamList-inform-table
+		display: flex
+		flex-direction: column
+		&.content-block
+			height: auto
+
+	& .custom-table-container
+		&.scrollbar-rail
+			max-height: 40vh
+		@include media( 767 )
+			&.scrollbar-rail
+				max-height: initial
+
+	& .teamList-inform-block
+		width: 100%
+		display: flex
+		flex-direction: column
+
+		& .inform-main-box
+			width: 100%
+			display: flex
+			margin-bottom: 15px
+
+			& .inform-box
+				height: 21vh
+				display: flex
+				flex-direction: column
+				width: 100%
+				margin-right: 15px
+
+				&:last-of-type
+					margin-right: 0px
+
+				& .section-info
+					height: 100%
+.app-main-content__container.teamList
+	& .content-block.light
+		& .section-info__text
+			color: $light-text !important

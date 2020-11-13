@@ -1,0 +1,151 @@
+.app-main-content__container.products
+	width: 100%
+	display: flex
+	flex-direction: column
+	height: calc(100% - 60px)
+
+
+	& .products-container
+		width: 100%
+		height: auto
+		display: flex
+		flex-wrap: wrap
+
+		& .product-item
+			max-width: 320px
+			width: 100%
+			height: 290px
+			margin-bottom: 15px
+			display: flex
+			flex-direction: column
+			position: relative
+			margin-right: 15px
+			background: rgba(255, 255, 255, 0.07)
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1)
+			border-radius: 5px
+			align-items: center
+			@include maxHeight ( 840 )
+				height: 265px
+
+			& .product-img-block
+				position: relative
+				width: 100%
+				@include maxHeight ( 840 )
+					max-height: 100px
+
+				& .product-img
+					width: 100%
+					height: 100%
+					object-fit: cover
+
+				& .product-tooltip
+					position: absolute
+					top: 90%
+					left: 50%
+					transform: translateX(-50%)
+					cursor: pointer
+					& span
+						position: relative
+						z-index: 999
+						display: flex
+						width: 15px
+						height: 15px
+						background: #FFFFFF
+						border-radius: 50%
+						font-style: normal
+						font-weight: 600
+						font-size: 12px
+						line-height: 20px
+						text-align: center
+						color: #D6B87A
+						justify-content: center
+						align-items: center
+					&:before
+						content: ''
+						width: 31px
+						height: 31px
+						display: flex
+						background: #D6B87A
+						box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+						position: absolute
+						z-index: 0
+						border-radius: 50%
+						left: 50%
+						top: 50%
+						transform: translate(-50%, -50%)
+				& .product-tooltip__box
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: calc(100% - 30px)
+					background: #ffffff
+					border-radius: 3px
+					padding: 10px
+					font-style: normal
+					font-weight: 500
+					font-size: 13px
+					line-height: 18px
+					transition: .3s ease-in
+					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+					filter: blur(3px)
+					opacity: 0
+					&:after
+						content: ''
+						position: absolute
+						top: calc(100% - 15px)
+						left: 50%
+						transform: translateX(-50%)
+						display: block
+						width: 21px
+						height: 21px
+						border-radius: 50%
+						background: #ffffff
+					&.active
+						transition: .3s ease-in
+						filter: blur(0px)
+						opacity: 1
+
+			& .product-title
+				font-style: normal
+				font-weight: 600
+				font-size: 16px
+				line-height: 20px
+				text-align: center
+				letter-spacing: 1px
+				color: #FFFFFF
+				margin-top: 20px
+
+				& .product-subtitle
+					color: #D6B87A
+					display: flex
+					width: 100%
+			& .green-btn
+				margin-top: 15px
+				transition: .2s ease-in
+				border: 2px solid #3C6A00
+
+				&.active
+					transition: .2s ease-in
+					background: transparent
+					border: 2px solid #D6B87A
+
+					&:hover
+						transition: .2s ease-in
+						background: rgba(214, 184, 122, 0.4)
+			&:last-of-type
+				margin-right: 0px
+	@include media(767)
+		& .products-container
+			justify-content: center
+	@include media(650)
+		& .products-container
+			& .product-item
+				margin-right: 0px
+
+.app-main-content__container.products .products-container .product-item.light
+	background: #ffffff
+	& .product-title
+		color: #232425
+	& .green-btn.active
+		color: #232425

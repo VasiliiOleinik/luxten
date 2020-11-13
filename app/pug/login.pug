@@ -1,0 +1,25 @@
+extends blocks/_layout
+append content
+	main.main
+		.box
+			.main-content.auth
+				.auth-content
+					h1(class="auth-content__title") Войти в систему
+					h3(class="auth-content__subtitle") Создайте аккаунт, чтобы начать инвестировать
+					form(action="" id="login")
+						.auth-content__label
+							span(class="input-name") ЭЛЕКТРОННАЯ ПОЧТА
+							input(type="text" id="email" name="email" placeholder="your@email.com")
+						.auth-content__label
+							span(class="input-name") ПАРОЛЬ
+							input(type="password" id="password" name="password" placeholder="6+ символов")
+						a(href="reset-pass.html" class="login-reset-pass") Забыли свой пароль? Восстановить доступ
+						button(type="submit" class="send-auth-form") Войти
+						.login-with-social
+							a(href="google.com" class="login-with-social__btn")
+								img(src="img/google.svg", alt="Google")
+								| Google
+							a(href="facebook.com" class="login-with-social__btn")
+								img(src="img/facebook.svg", alt="Facebook")
+								| Facebook
+						a(href="register.html" class="to-login-btn") ЕЩЕ НЕ ЗАРЕГИСТРИРОВАНЫ ? - ЗАРЕГИСТРИРОВАТЬСЯ

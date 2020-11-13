@@ -1,0 +1,343 @@
+body
+  margin: 0
+  font-weight: normal
+  font-size: 16px
+  color: #000000
+  font-family: 'Montserrat', sans-serif
+  background-color: #22293D
+  position: relative
+  transition: .2s ease-in
+  &.start
+    & .start-img
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      min-height: 100vh
+
+  &.light
+    background: #EBEBEB
+  &.dark
+    background: #343434
+
+  & *
+    margin: 0
+    padding: 0
+    border: 0
+    outline: 0
+    background-color: transparent
+    box-sizing: border-box
+
+a
+  text-decoration: none
+  transition: .3s
+  color: inherit
+
+ul
+  list-style: none
+
+img
+  max-width: 100%
+
+button
+  cursor: pointer
+  font-family: 'Montserrat', sans-serif
+
+textarea,
+input
+  font-family: 'Montserrat', sans-serif
+
+label
+  cursor: pointer
+  &:focus,
+  &:hover,
+  &:active
+    outline: 0
+    outline-offset: 0
+    -webkit-tap-highlight-color: transparent
+    user-select: none
+
+section
+  flex-grow: 1
+
+select, input, textarea
+  appearance: none
+  border-radius: 0
+  background-color: transparent
+
+.content-wrapper
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  position: relative
+  transition: .3s
+  left: 0
+
+.page-wrapper
+  flex: 1 1
+
+.footer-wrapper
+  flex: 0 1
+
+.box
+  width: 100%
+  display: flex
+  max-width: 1440px
+  padding: 0 30px
+  margin: 0 auto
+  position: relative
+
+  &.wrap
+    flex-wrap: wrap
+
+.head-block
+  width: 100%
+  height: 45px
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1)
+  border-radius: 5px 5px 0px 0px
+  padding: 12px 10px
+  font-style: normal
+  font-weight: 600
+  font-size: 16px
+  line-height: 20px
+  text-align: left
+  letter-spacing: 1px
+  display: flex
+  align-items: center
+
+  &.dark
+    background: $dark-head
+    color: $dark-head-color
+    transition: .2s ease-in
+
+  &.light
+    background: $light-head
+    color: $dark-body
+    transition: .2s ease-in
+
+.content-block
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: column
+  padding: 20px 10px 30px 10px
+  background: rgba(255, 255, 255, 0.85)
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1)
+  border-radius: 0px 0px 5px 5px
+  position: relative
+
+  &.dark
+    background: $dark-content
+    transition: .2s ease-in
+
+  &.light
+    background: $light-content
+    transition: .2s ease-in
+
+.custom-scroll
+  &::-webkit-scrollbar-button
+    background-image: url('')
+    background-repeat: no-repeat
+    width: 6px
+    height: 0
+
+  &::-webkit-scrollbar-track
+    box-shadow: 0px 0px 3px #000 inset
+
+  &::-webkit-scrollbar-thumb
+    -webkit-border-radius: 5px
+    border-radius: 5px
+    background-color:#ffcb17
+    background-color: rgb(255,255,255)
+    background-color: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 48%, rgba(255,255,255,1) 48%, rgba(145,145,145,1) 100%)
+    background-color: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 48%,rgba(255,255,255,1) 48%,rgba(145,145,145,1) 100%)
+    background-color: radial-gradient(ellipse at center, rgba(255,255,255,1) 48%,rgba(255,255,255,1) 48%,rgba(145,145,145,1) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#919191',GradientType=1 )
+    box-shadow: 0px 1px 1px #fff inset
+    background-image: url(/bitrix/templates/main/img/scroll.png)
+    background-position: center
+    background-repeat: no-repeat
+
+  &::-webkit-resizer
+    background-image: url('')
+    background-repeat: no-repeat
+    width: 7px
+    height: 0px
+
+  &::-webkit-scrollbar
+    width: 11px
+
+.green-btn
+  max-width: 231px
+  width: 100%
+  height: 40px
+  font-style: normal
+  font-weight: bold
+  font-size: 13px
+  line-height: 40px
+  text-align: center
+  color: #FFFFFF
+  background: linear-gradient(169.03deg, #2B5300 -27.37%, #3C6A00 100%)
+  border-radius: 5px
+  border: 1px solid #3C6A00
+  transition: .2s ease-in
+  &:hover
+    transition: .2s ease-in
+    background: linear-gradient(173.22deg, rgba(43, 83, 0, 0.4) -27.37%, rgba(60, 106, 0, 0.4) 100%)
+.content-block.light
+  & .green-btn
+    border: 1px solid #3C6A00
+    background: rgba(57, 101, 0, .8) !important
+    transition: .2s ease-in
+    &:hover
+      transition: .2s ease-in
+      color: #232425
+      background: linear-gradient(173.22deg, rgba(43, 83, 0, 0.4) -27.37%, rgba(60, 106, 0, 0.4) 100%) !important
+.initial-direction
+  flex-direction: initial !important
+.flex-wrap
+  flex-wrap: wrap
+.upload-image
+  & span
+    display: flex
+    width: 100%
+    margin-top: 7px
+    font-style: normal
+    font-weight: 600
+    font-size: 14px
+    line-height: 17px
+    text-align: center
+    letter-spacing: 1px
+    text-decoration-line: underline
+    color: #FFFFFF
+
+  & .uploaded-image
+    max-width: 89px
+    max-height: 89px
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.upload-image-input
+  visibility: hidden
+  width: 0
+  height: 0
+
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+  background: #ffffff
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before
+  background: #D6B87A
+.copyTextInfo
+  right: 32px
+  color: #5c9e06
+  position: absolute
+  top: calc(100% - 72px)
+  font-size: 12px
+  font-weight: 700
+  text-transform: uppercase
+  display: none
+.app-main-content__container.investNow .investNow-box .content-block.invest .investNow-input-summ .input-summ__block-btn,
+.app-main-content__container.investCalc .investCalc-inform-block .inform-main-box .investCalc-box .fordable-balance__btn.invest,
+.app-table .table-btn.green,
+.app-main-content__container.affiliateProg .affiliateProg-inform-block .inform-block-box .copy-link,
+.app-main-content__container.tariffPlans .tariffPlans-container .plan-card .plan-card-link,
+.main-content.privacy .main-button
+  border: 1px solid #2B5300 !important
+  transition: .2s ease-in
+.app-main-content__container.investNow .investNow-box .content-block.invest .investNow-input-summ .input-summ__block-btn:hover,
+.app-main-content__container.investCalc .investCalc-inform-block .inform-main-box .investCalc-box .fordable-balance__btn.invest:hover,
+.app-main-content__container.affiliateProg .affiliateProg-inform-block .inform-block-box .copy-link:hover,
+.app-table .table-btn.green:hover,
+.app-main-content__container.tariffPlans .tariffPlans-container .plan-card .plan-card-link:hover,
+.main-content.privacy .main-button:hover
+  transition: .2s ease-in
+  background: linear-gradient(173.22deg, rgba(43, 83, 0, 0.4) -27.37%, rgba(60, 106, 0, 0.4) 100%)
+.app-main-content__container.investNow .investNow-box .content-block.invest.light .investNow-input-summ .input-summ__block-btn:hover,
+body.light .app-main-content__container.investCalc .investCalc-inform-block .inform-main-box .investCalc-box .fordable-balance__btn.invest:hover,
+body.light .app-table .table-btn.green:hover,
+body.light .app-main-content__container.affiliateProg .affiliateProg-inform-block .inform-block-box .copy-link:hover,
+body.light .app-main-content__container.tariffPlans .tariffPlans-container .plan-card .plan-card-link:hover
+  transition: .2s ease-in
+  background: linear-gradient(173.22deg, rgba(43, 83, 0, 0.4) -27.37%, rgba(60, 106, 0, 0.4) 100%) !important
+  color: #232425
+
+.app-main-content__container.investMy .investMy-inform-block .inform-main-box .investMy-fordable-balance .fordable-balance__btn:hover
+    transition: .3s ease-in
+    color: #333333
+    background: linear-gradient(170.39deg, #d6b87a -27.37%, #d6b87a 100%)
+.intl-tel-input .selected-flag
+  height: 40px
+@include media( 1199 )
+  body
+    background-size: cover
+
+@include media( 991 )
+  body.start .start-img
+    object-fit: cover
+
+@include media( 767 )
+  .content-wrapper
+    min-height: 570px
+  .footer-wrapper
+    display: none
+  .main.main-page
+    margin-top: 50px !important
+
+
+body.light .scrollbar-rail > .scroll-element .scroll-element_size
+  transition: .2s ease-in-out
+  background-color: #232425 !important
+body.dark .scrollbar-rail > .scroll-element .scroll-element_size
+  transition: .2s ease-in-out
+  background-color: #FFFFFF !important
+
+
+
+.tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-box
+	background: #ffffff
+	border: none
+	border-radius: 6px
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+.tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-box:after
+  display: none
+.tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-content
+  padding: 10px
+  font-style: normal
+  font-weight: 500
+  font-size: 13px
+  line-height: 18px
+  color: #232425
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-border
+  display: none
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-background
+  border-top-color: #fff
+
+.app-main .main-content .app-main-content
+  overflow: initial !important
+#replenishTable
+  max-height: 175px
+  min-height: 117px
+
+.input--group
+  display: flex
+  align-items: center
+  &__prepend
+    width: 40px
+    height: 40px
+    background: #ffffff
+    border-right: 1px solid #c1c1c1
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #D6B87A
+    font-size: 18px
+    font-weight: 700
+    border-radius: 3px 0px 0px 3px
+
+.ui-slider .ui-slider-handle
+  margin: 0px
+
+.range
+  width: calc(100% - 24px)

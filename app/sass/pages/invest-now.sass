@@ -1,0 +1,326 @@
+.app-main-content__container.investNow
+	width: 100%
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
+	height: calc(100% - 60px)
+
+	& .investNow-box
+		width: calc(70% - 20px)
+		margin-right: 20px
+		height: calc(100% - 60px)
+
+		&.calc
+			width: 30%
+			margin-right: 0px
+
+			& .content-block
+				padding: 0px
+
+			& .investNow-calc-section
+				width: 100%
+				box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1)
+				border-radius: 5px
+				padding: 13px 10px 25px 10px
+				margin-bottom: 5px
+
+				& .calc-section__title
+					font-style: normal
+					font-weight: 500
+					font-size: 14px
+					line-height: 17px
+					text-align: center
+					letter-spacing: 1px
+					color: #D6B87A
+					margin-bottom: 17px
+					display: flex
+					width: 100%
+
+		& .content-block
+			height: auto
+
+			&.invest
+				padding: 32px 10px 45px 10px
+				// margin-bottom: 20px
+				@include maxHeight ( 800 )
+					padding: 15px 10px 20px 10px
+
+				& .investNow-balance
+					width: 100%
+					display: flex
+					align-items: center
+					margin-bottom: 20px
+					@include maxHeight ( 800 )
+						margin-bottom: 2%
+
+					&__text
+						font-style: normal
+						font-weight: bold
+						font-size: 20px
+						line-height: 24px
+						text-align: center
+						letter-spacing: 1px
+						color: #E2E2E2
+					&__info
+						height: 40px
+						display: flex
+						align-items: center
+						justify-content: center
+						background: rgba(203, 203, 203, 0.3)
+						border-radius: 3px
+						margin-left: 30px
+						width: calc(100% - 250px)
+						font-style: normal
+						font-weight: 500
+						font-size: 20px
+						line-height: 24px
+						color: #FFFFFF
+						text-align: center
+						@include maxHeight ( 800 )
+							height: 35px
+
+				& .investNow-plans
+					width: 100%
+					display: flex
+					flex-direction: column
+					align-items: flex-start
+					justify-content: flex-start
+
+					&__title
+						font-style: normal
+						font-weight: 600
+						font-size: 14px
+						line-height: 17px
+						text-align: center
+						letter-spacing: 1px
+						color: #E2E2E2
+						margin-bottom: 13px
+
+					&-list
+						display: flex
+						width: 100%
+						margin-bottom: 20px
+
+						& .investNow-plan-elem
+							width: 100%
+							display: flex
+							margin-right: 15px
+							flex-direction: column
+							background: #292828
+							border-radius: 3px
+							padding: 12px 10px
+
+							&:last-of-type
+								margin-right: 0px
+
+							&.active
+								& .plan-elem__name
+									& .planElem-status
+										transition: .3s ease-in-out
+										&:after
+											content: url('../img/active-plan.svg')
+								& .plan-elem-btn
+									transition: .3s ease-in
+									color: #333333
+									background: linear-gradient(170.39deg, rgba(214, 184, 122, 1) -27.37%, rgba(214, 184, 122, 1) 100%)
+
+							& .plan-elem__name
+								display: flex
+								justify-content: space-between
+								align-items: center
+								margin-bottom: 15px
+
+								& .name-text
+									font-style: normal
+									font-weight: bold
+									font-size: 20px
+									line-height: 119%
+									text-align: center
+									letter-spacing: 0.02em
+									text-transform: uppercase
+									text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+
+									&.bronze
+										background: linear-gradient(to bottom, #986419 0%, rgba(152, 100, 25, 0) 100%)
+										filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(152, 100, 25, 1)', endColorstr='rgba(152, 100, 25, 0)', GradientType=1 )
+										display: inline-block
+										-webkit-background-clip: text
+										-webkit-text-fill-color: transparent
+									&.silver
+										background: linear-gradient(to bottom, #eeeeee 0%, rgba(238, 238, 238, 0) 100%)
+										filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(238, 238, 238, 1)', endColorstr='rgba(238, 238, 238, 0)', GradientType=1 )
+										display: inline-block
+										-webkit-background-clip: text
+										-webkit-text-fill-color: transparent
+									&.gold
+										background: linear-gradient(to bottom, #d6b87a 0%, rgba(214, 184, 122, 0) 100%)
+										filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(214, 184, 122, 1)', endColorstr='rgba(214, 184, 122, 0)', GradientType=1 )
+										display: inline-block
+										-webkit-background-clip: text
+										-webkit-text-fill-color: transparent
+								& .planElem-status
+									width: 29px
+									height: 29px
+									background: rgba(105, 105, 105, 0.7)
+									border-radius: 50%
+									position: relative
+									transition: .3s ease-in-out
+
+							& .plan-elem-list
+								width: 100%
+								display: flex
+								flex-direction: column
+								align-items: flex-start
+
+								&__item
+									width: 100%
+									padding-left: 20px
+									font-style: normal
+									font-weight: 300
+									font-size: .9em
+									line-height: 120%
+									letter-spacing: 0.01em
+									color: #E2E2E2
+									margin-bottom: 15px
+									position: relative
+									@include maxHeight ( 800 )
+										font-size: .8em
+
+									& span
+										font-weight: 700
+
+									&:before
+										content: ''
+										width: 6px
+										height: 6px
+										border-radius: 50%
+										display: block
+										position: absolute
+										left: 0
+										top: 50%
+										transform: translateY(-50%)
+
+									&.bronze:before
+										background: linear-gradient(182.6deg, #986419 2.17%, rgba(61, 52, 41, 0) 353.62%)
+									&.silver:before
+										background: linear-gradient(182.6deg, #B3B3B3 2.17%, rgba(61, 52, 41, 0) 353.62%)
+									&.gold:before
+										background: linear-gradient(144.4deg, #D6B87A 20.86%, rgba(214, 184, 122, 0) 121.3%)
+							& .plan-elem-btn
+								width: 100%
+								display: block
+								margin-top: 10px
+								height: 30px
+								border: 1px solid #D6B87A
+								border-radius: 5px
+								font-style: normal
+								font-weight: bold
+								font-size: 13px
+								line-height: 16px
+								text-align: center
+								color: #FFFFFF
+								background: linear-gradient(170.39deg, rgba(214, 184, 122, 0) -27.37%, rgba(214, 184, 122, 0) 100%)
+								transition: .3s ease-in
+								&:hover
+									transition: .3s ease-in
+									color: #333333
+									background: linear-gradient(170.39deg, rgba(214, 184, 122, 1) -27.37%, rgba(214, 184, 122, 1) 100%)
+
+				& .investNow-input-summ
+					display: flex
+					width: 100%
+					align-items: flex-start
+
+					& .input-summ__text
+						max-width: 180px
+						width: 100%
+						font-style: normal
+						font-weight: 600
+						font-size: 14px
+						line-height: 17px
+						letter-spacing: 1px
+						color: #E2E2E2
+						margin-right: 65px
+
+					& .input-summ__block
+						width: calc(100% - 145px)
+						display: flex
+						flex-wrap: wrap
+						padding-right: 20px
+
+						&-input
+							height: 40px
+							background: #FFFFFF
+							border-radius: 3px
+							padding: 10px 15px
+							font-style: normal
+							font-weight: 500
+							font-size: 16px
+							line-height: 20px
+							color: #333333
+							width: calc(50% - 4px)
+							margin-right: 4px
+							@include maxHeight ( 800 )
+								height: 35px
+						&-btn
+							width: calc(50% - 4px)
+							align-items: center
+							height: 40px
+							background: linear-gradient(168.28deg, #2B5300 -27.37%, #3C6A00 100%)
+							border-radius: 5px
+							font-style: normal
+							font-weight: bold
+							font-size: 13px
+							line-height: 16px
+							text-align: center
+							color: #FFFFFF
+							margin-left: 4px
+							@include maxHeight ( 800 )
+								height: 35px
+						&-info
+							margin-top: 15px
+							font-style: normal
+							font-weight: 300
+							font-size: 13px
+							line-height: 119%
+							text-align: center
+							letter-spacing: 0.02em
+							color: #D6B87A
+							width: 100%
+							display: flex
+
+							& span
+								margin: 0px 5px
+.section-info
+	display: flex
+	justify-content: center
+	align-items: center
+
+	&__text
+		margin-left: 15px
+		font-style: normal
+		font-weight: bold
+		font-size: 20px
+		line-height: 24px
+		color: #E2E2E2
+		margin-right: 5px
+	&__dollar
+		font-style: normal
+		font-weight: bold
+		font-size: 20px
+		line-height: 24px
+		color: #D6B87A
+.content-block.light
+	& .investNow-balance__text,
+	& .investNow-balance__info,
+	& .investNow-plans__title,
+	& .input-summ__text,
+	& .calc-section__title,
+	& .section-info__text
+		color: $light-text !important
+	& .input-summ__block-info
+		color: $red !important
+	& .investNow-plan-elem
+		background: #343536 !important
+		&.active
+			background: $light-text !important

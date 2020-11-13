@@ -1,0 +1,80 @@
+extends blocks/_app-layout
+append content
+  main.app-main
+    .main-content
+      include blocks/_left-menu
+      .app-main-content.dark
+        .app-main-content__header
+          h1(class="app-main-content__title") Калькулятор прибыли
+          ul(class="app-breadcrumbs")
+            li(class="breadcrumb")
+              a(href="/" class="breadcrumb-link") Главная
+            li(class="breadcrumb-separator") /
+            li(class="breadcrumb")
+              a(href="/" class="breadcrumb-link") Инвестиции
+            li(class="breadcrumb-separator") /
+            li(class="breadcrumb")
+              a(href="javascript:void(0)" class="breadcrumb-link current") Калькулятор прибыли
+        .app-main-content__container.investCalc
+          .investCalc-inform-block
+            .inform-main-box
+              .head-block.dark Сделать просчет прибыльности  инвестиции
+              .content-block.dark
+                .investCalc-box.amount
+                  p(class="investCalc__title") Введите сумму инвестиции (USD):
+                  section(class="range-content")
+                    .range-value-info
+                      .input--group
+                        .input--group__prepend
+                          span $
+                        input(class="range-amount onlyDigits" val="" type="text")
+                      span(class="range-info") до 1 млн. долл.
+                    .range
+                      .range-bar
+                      #invest-summ-range
+                .investCalc-box.period
+                  p(class="investCalc__title") Срок инвестиции:
+                  section(class="range-content")
+                    .range-value-info
+                      .input--group
+                        .input--group__prepend
+                          img(src="img/calendar-2.svg", alt="Calendar" style="max-width: 20px")
+                        input(class="range-amount onlyDigits" val="" type="text")
+                      span(class="range-info") 12 месяцев
+                    .range
+                      .range-bar
+                      #invest-period-range
+                .investCalc-box
+                  p(class="investCalc__title") Ваш результат инвестирования (USD):
+                  input(type="text" readonly value="" id="finalInvestSumm")
+                .investCalc-box
+                  a(href="invest-now,html" class="fordable-balance__btn invest") Создать новую инвестицию
+            .inform-box-container
+              .inform-box
+                .head-block.dark Сумма инвестиции
+                .content-block.dark
+                  .section-info
+                    img(src="img/coins.svg", alt="Admission")
+                    span(class="section-info__text" id="investCalcSumm") 0
+                    span(class="section-info__dollar") $
+              .inform-box
+                .head-block.dark Прибыль за 1 месяц
+                .content-block.dark
+                  .section-info
+                    img(src="img/diagram.svg", alt="Withdraw")
+                    span(class="section-info__text" id="investCalcMonth") 0
+                    span(class="section-info__dollar") $
+              .inform-box
+                .head-block.dark Ежемесячный процент
+                .content-block.dark
+                  .section-info
+                    img(src="img/procent.svg", alt="Diagram")
+                    span(class="section-info__text" id="investCalcProcent") 7
+                    span(class="section-info__dollar") %
+              .inform-box
+                .head-block.dark Сумма по окончанию
+                .content-block.dark
+                  .section-info
+                    img(src="img/coins.svg", alt="Referals")
+                    span(class="section-info__text" id="investCalcFinal") 0
+                    span(class="section-info__dollar") $

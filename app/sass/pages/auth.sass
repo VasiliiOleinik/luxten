@@ -1,0 +1,259 @@
+.main-content.auth
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	text-align: center
+
+	.auth-content
+		max-width: 480px
+		width: 100%
+		display: flex
+		flex-direction: column
+
+		&.success
+			max-width: 730px
+
+			& .to-login-btn
+				max-width: 470px
+				margin: 0 auto
+
+			& .auth-content__subtitle
+				margin-bottom: 50px
+
+		&__title
+			font-style: normal
+			font-weight: bold
+			font-size: 35px
+			line-height: 119%
+			letter-spacing: 0.02em
+			color: #E2E2E2
+			margin-bottom: 15px
+		&__subtitle
+			font-style: normal
+			font-weight: 500
+			font-size: 16px
+			line-height: 20px
+			text-align: center
+			letter-spacing: 0.02em
+			color: #E2E2E2
+			margin-bottom: 20px
+		& form
+			text-align: left
+
+		& .send-auth-form
+			width: 100%
+			height: 50px
+			display: flex
+			align-items: center
+			justify-content: center
+			background: linear-gradient(173.22deg, #2B5300 -27.37%, #3C6A00 100%)
+			border-radius: 5px
+			border: 1px solid #2B5300
+			font-style: normal
+			font-weight: 600
+			font-size: 14px
+			line-height: 17px
+			color: #FFFFFF
+			transition: .3s
+			margin-bottom: 25px
+
+			&:hover
+				transition: .3s
+				background: linear-gradient(173.22deg, rgba(43, 83, 0, .4) -27.37%,  rgba(60, 106, 0, .4) 100%)
+
+		& .to-login-btn
+			width: 100%
+			height: 50px
+			display: flex
+			align-items: center
+			justify-content: center
+			background: #D6B87A
+			border: 1px solid #D6B87A
+			border-radius: 5px
+			font-style: normal
+			font-weight: 600
+			font-size: 14px
+			line-height: 17px
+			text-align: center
+			color: #333333
+			transition: .3s
+			margin-bottom: 30px
+
+			&:hover
+				transition: .3s
+				color: #ffffff
+				background: rgba(214, 184, 122, .4)
+	& .login-reset-pass
+		margin-bottom: 30px
+		font-style: normal
+		font-weight: bold
+		font-size: 14px
+		line-height: 150%
+		text-align: center
+		letter-spacing: 0.04em
+		text-decoration-line: underline
+		color: #FFFFFF
+		display: flex
+		align-items: center
+		justify-content: center
+
+.auth-content__label
+	width: 100%
+	display: flex
+	margin-bottom: 15px
+	position: relative
+	flex-direction: column
+
+	&.agree
+		flex-direction: row
+		margin-bottom: 25px
+
+		& p
+			margin-left: 10px
+			font-style: normal
+			font-weight: 500
+			font-size: 12px
+			line-height: 150%
+			letter-spacing: 0.04em
+			color: #E2E2E2
+
+			& a
+				border-bottom: 1px solid #E2E2E2
+		& input
+			position: absolute
+			z-index: -1
+			opacity: 0
+			margin: 10px 0 0 20px
+
+		& .custom-checkbox
+			position: relative
+			cursor: pointer
+			background: #FFFFFF
+			border: 1px solid #A0A7BC
+			box-sizing: border-box
+			border-radius: 3px
+			width: 18px
+			height: 18px
+			display: flex
+			flex-shrink: 0
+			transition: .3s ease-in
+
+			&:after
+				content: ''
+				position: absolute
+				width: 10px
+				height: 10px
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				background: #396500
+				border: 1px solid #A0A7BC
+				box-sizing: border-box
+				border-radius: 3px
+				opacity: 0
+				transition: .3s
+		& input:checked ~ .custom-checkbox:after
+			opacity: 1
+			transition: .3s ease-in
+
+
+	& .input-name
+		font-style: normal
+		font-weight: bold
+		font-size: 13px
+		line-height: 16px
+		letter-spacing: 0.02em
+		color: #D6B87A
+		margin-bottom: 7px
+		// text-transform: uppercase
+	& input[type="text"],
+	& input[type="password"]
+		width: 100%
+		height: 55px
+		background: #CACACA
+		border: 1px solid #CACACA
+		box-sizing: border-box
+		border-radius: 2px
+		padding: 18px 15px
+		font-style: normal
+		font-weight: 500
+		font-size: 16px
+		line-height: 20px
+		letter-spacing: 0.02em
+		color: #333333
+		transition: .3s
+		border: 2px solid transparent
+
+		&.invalid
+			transition: .3s
+			border: 2px solid #EB5757
+		&.success
+			transition: .3s
+			border: 2px solid #2B5300
+	& textarea
+		width: 100%
+		background: #FFFFFF
+		border-radius: 3px
+		padding: 10px 15px
+		font-style: normal
+		font-weight: 500
+		font-size: 16px
+		line-height: 20px
+		color: #333333
+
+	& label.invalid
+		font-style: normal
+		font-weight: normal
+		font-size: 10px
+		line-height: 20px
+		letter-spacing: 0.02em
+		color: #EB5757
+		text-transform: lowercase
+	& label.phoneInvalid
+		font-style: normal
+		font-weight: normal
+		font-size: 10px
+		line-height: 20px
+		letter-spacing: 0.02em
+		color: #EB5757
+		text-transform: lowercase
+.content-block.light
+	& .auth-content__label .input-name
+		color: $light-text
+.login-with-social
+	display: flex
+	align-items: center
+	width: 100%
+
+	&__btn
+		background: rgba(196, 196, 196, 0.68)
+		border: 1px solid #8A8D95
+		box-sizing: border-box
+		border-radius: 3px
+		width: calc(50% - 7.5px)
+		transition: .2s ease-in
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 50px
+		margin-bottom: 30px
+		font-style: normal
+		font-weight: 500
+		font-size: 14px
+		line-height: 150%
+		letter-spacing: 0.04em
+		color: #000000
+		& img
+			margin-right: 10px
+		&:hover
+			background: rgba(196, 196, 196, 1)
+			transition: .2s ease-in
+		&:first-of-type
+			margin-right: 7.5px
+		&:last-of-type
+			margin-left: 7.5px
+			& img
+				position: relative
+				top: 2px
+				left: 10px

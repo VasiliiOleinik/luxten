@@ -1,0 +1,90 @@
+extends blocks/_app-layout
+append content
+	main.app-main
+		.main-content
+			include blocks/_left-menu
+			.app-main-content.dark
+				.app-main-content__header
+					h1(class="app-main-content__title") Вывести средства
+					ul(class="app-breadcrumbs")
+						li(class="breadcrumb")
+							a(class="breadcrumb-link" href="/") Главная
+						li(class="breadcrumb-separator") /
+						li(class="breadcrumb")
+							a(class="breadcrumb-link" href="/") Кошелек
+						li(class="breadcrumb-separator") /
+						li(class="breadcrumb")
+							a(class="breadcrumb-link current" href="javascript:void(0)") Вывести средства
+				.app-main-content__container.replenishWallet
+					.replenishWallet-inform-block
+						.head-block.dark Создать заявку на вывод средств
+						.content-block.dark.initial-direction.flex-wrap
+							span(class="create-replenish-order__title") Доступные средства (USD):
+							input(class="create-replenish-order__input",type="text",value="4 011 111 119 110,000 000 000 0001",readonly)
+							a(class="create-replenish-order__btn" data-fancybox data-src="#replenish-wallet" href="javascript:;") Вывести
+						.wallet-modal.dark(id="replenish-wallet" style="display: none;")
+							.wallet-modal-content
+								.head-block.dark Подтверждение вывода средств
+								.content-block.dark
+									.wallet-modal__info
+										span(class="wallet-modal__info-title") Информация к прочтению
+										span(class="wallet-modal__info-text")  Введите сумму (минимальная сумма для вывода - 100 USD.)<br/>
+											| Внимание! Убедитесь в правильности Ваших платежных реквизитов
+										br
+										span(class="wallet-modal__info-text")  <b>Лимиты:</b> 
+											| В течение рабочего дня заявка на вывод средств может быть создана один раз. Интервал между созданием заявок должен составлять не менее 24-х часов.
+									p(class="wallet-modal__title") Вывод средств на кошелек
+										span(class="wallet-code") Z12302930232
+									.wallet-modal__input-summ
+										form(id="withdrawFunds" action="")
+											input(type="text")
+											span(class="walletPursheError")
+											button(type="submit") Подтвердить
+					.replenishWallet-inform-block
+						.head-block.dark История вывода баланса
+						.content-block.dark
+							.custom-table-container.scrollbar-rail.withdrawFundsTable
+								.custom-table-div(id="withdrawFundsTable" style="width:100%")
+									.table-header
+										.table-row
+											.table-cell НОмер кошелька
+											.table-cell Сумма(USD)
+											.table-cell Комментарий
+											.table-cell Дата
+											.table-cell Статус
+									.table-body
+										.table-row
+											.table-cell Z162234522
+											.table-cell 100
+											.table-cell Отлично отработанный год
+											.table-cell 21.12.2020
+											.table-cell
+												span(class="success") Зачислен
+										.table-row
+											.table-cell Z162234522
+											.table-cell 10000
+											.table-cell Отлично отработанный год
+											.table-cell 21.12.2020
+											.table-cell
+												span(class="error") Отклонен
+										.table-row
+											.table-cell Z162234522
+											.table-cell 10000
+											.table-cell Отлично отработанный год
+											.table-cell 21.12.2020
+											.table-cell
+												span(class="waiting") Отклонен
+										.table-row
+											.table-cell Z162234522
+											.table-cell 100
+											.table-cell Отлично отработанный год
+											.table-cell 21.12.2020
+											.table-cell
+												span(class="waiting") Отклонен
+										.table-row
+											.table-cell Z162234522
+											.table-cell 10000
+											.table-cell Отлично отработанный год
+											.table-cell 21.12.2020
+											.table-cell
+												span(class="waiting") Отклонен

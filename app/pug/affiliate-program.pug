@@ -1,0 +1,48 @@
+extends blocks/_app-layout
+append content
+	main.app-main
+		.main-content
+			include blocks/_left-menu
+			.app-main-content.dark
+				.app-main-content__header
+					h1(class="app-main-content__title") Моя команда
+					ul(class="app-breadcrumbs")
+						li(class="breadcrumb")
+							a(href="/" class="breadcrumb-link") Главная
+						li(class="breadcrumb-separator") /
+						li(class="breadcrumb")
+							a(href="/" class="breadcrumb-link") Команда
+						li(class="breadcrumb-separator") /
+						li(class="breadcrumb")
+							a(href="javascript:void(0)" class="breadcrumb-link current") Партнерская программа
+				.app-main-content__container.affiliateProg
+					.affiliateProg-inform-block
+						.inform-block-box
+							.head-block.dark Партнерская программа
+							.content-block.dark
+								span(class="affiliateProg__info") Каждый зарегистрированный участник компании «LUXTEN» может воспользоваться своей реферальной ссылкой для приглашения партнеров.
+								p(class="affiliateProg__title big")  ”LUXTEN” предлагает  2 уровня партнерского вознаграждения:
+								p(class="affiliateProg__title") Партнёров 1 уровня
+									span - общее количество лично приглашенных по реферальной ссылке.
+								p(class="affiliateProg__text") Расчет вознаграждения за партнёра по следующему принципу - от партнёра 1 уровеня
+									span - 1 раз в месяц 20% от дохода, полученного партнёром в этот период.
+								p(class="affiliateProg__title") Партнёров 2 уровня
+									span - общее количество лично приглашённых у Партнёров 1 уровня.
+								p(class="affiliateProg__text") Расчет вознаграждения за партнёра по следующему принципу - 1 раз в месяц 10% от дохода, полученного партнёром в этот период.
+					.affiliateProg-inform-block
+						.inform-block-box.half
+							.head-block.dark Партнерская ссылка
+							.content-block.dark
+								p(class="affiliateProg__title big")  Ваша ссылка для привлечения рефералов:
+								input(type="text" value="http://lk.luxten-invest.com/79100000000" class="affiliateProg__input" readonly id="referalLink")
+								span(class="copyTextInfo") Текст скопирован
+								button(type="button" class="copy-link") Копировать ссылку
+						.inform-block-box.half
+							.head-block.dark  Отчет по рефералам
+							.content-block.dark.half
+								.content-block-box
+									p(class="affiliateProg__title big")  Всего рефералов
+									input(type="text" value="0" class="affiliateProg__input" readonly)
+								.content-block-box
+									p(class="affiliateProg__title big")  Активных рефералов
+									input(type="text" value="0" class="affiliateProg__input" readonly)

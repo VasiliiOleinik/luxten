@@ -1,0 +1,157 @@
+.main
+	&.main-page
+		margin-top: 150px
+		margin-bottom: 30px
+
+	&-content
+		width: 100%
+
+		&.only-main
+			max-width: 640px
+
+		&__title
+			font-style: normal
+			font-weight: bold
+			font-size: 45px
+			line-height: 119%
+			color: #E2E2E2
+			margin-bottom: 12px
+
+		&__subtitle
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 20px
+			color: #E2E2E2
+			margin-bottom: 30px
+
+		&__main-buttons
+			display: flex
+			align-items: center
+			margin-bottom: 25px
+
+		&__info
+			display: flex
+
+			& span
+				max-width: 300px
+				width: 100%
+				margin-left: 15px
+				font-style: normal
+				font-weight: 300
+				font-size: 11px
+				line-height: 13px
+				color: #FFFFFF
+				opacity: .7
+
+.main-button
+	max-width: 296px
+	width: 100%
+	height: 50px
+	display: flex
+	align-items: center
+	justify-content: center
+	color: #fff
+	font-style: normal
+	font-weight: 600
+	font-size: 14px
+	border: 2px solid #396500
+	border-radius: 5px
+	transition: .3s
+	margin-right: 15px
+
+	&:hover,
+	&.active
+		transition: .3s
+		background: linear-gradient(169.29deg, #2B5300 -27.37%, #3C6A00 100%)
+		border-color: transparent
+
+.app-main
+	& .main-content
+		display: flex
+		align-items: flex-start
+
+		& .app-main-content
+			width: calc(100% - 220px)
+			height: calc(100vh - 90px)
+
+			&.dark
+				background: $dark-main-content
+				transition: .2s ease-in
+
+			&.light
+				.app-main-content__header
+					background: $light-content
+					transition: .2s ease-in
+					& .app-main-content__title
+						color: #333333
+						transition: .2s ease-in
+				& input[type="text"],
+				& textarea
+					background: rgba(203, 203, 203, 0.2) !important
+					border: 1px solid #C9CACD !important
+					transition: .2s ease-in !important
+			& .app-main-content__header
+				padding: 20px 35px 20px 20px
+				width: 100%
+				display: flex
+				align-items: center
+				background: $dark-sidebar
+				max-height: 59px
+				justify-content: space-between
+				transition: .2s ease-in
+
+				& .app-main-content__title
+					font-style: normal
+					font-weight: 600
+					font-size: 20px
+					line-height: 24px
+					text-align: center
+					letter-spacing: 1px
+					text-transform: uppercase
+					color: $dark-head-color
+					transition: .2s ease-in
+				& .app-breadcrumbs
+					display: flex
+					align-items: center
+					font-style: normal
+					font-weight: normal
+					font-size: 13px
+					line-height: 16px
+					letter-spacing: 1px
+					color: #979797
+
+					& .breadcrumb-link.current,
+					& .breadcrumb-link:hover
+						color: #D6B87A
+						transition: .3s
+
+					& .breadcrumb-separator
+						margin: 0px 5px
+			& .app-main-content__container
+				padding: 20px 35px 35px 20px
+				@include maxHeight ( 800 )
+					padding-bottom: 20px
+@include media( 1199 )
+	.app-main .main-content .app-main-content
+		width: 100%
+@include media( 767 )
+	.main-content__subtitle,
+	.main-content__info,
+	.main-button.plans
+		display: none
+	.main-content__title
+		text-align: center
+		font-style: normal
+		font-weight: bold
+		font-size: 28px
+		line-height: 119%
+		text-align: center
+		color: #E2E2E2
+		margin-bottom: 40px
+	.main-button
+		margin: 0 auto
+		transition: .3s
+		background: linear-gradient(169.29deg, #2B5300 -27.37%, #3C6A00 100%)
+		border-color: transparent
+

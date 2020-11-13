@@ -1,0 +1,60 @@
+extends blocks/_app-layout
+append content
+	main.app-main
+		.main-content
+			include blocks/_left-menu
+			.app-main-content.dark
+				.app-main-content__header
+					h1(class="app-main-content__title") Товары
+					ul(class="app-breadcrumbs")
+						li(class="breadcrumb")
+							a(class="breadcrumb-link" href="/") Главная
+						li(class="breadcrumb-separator") /
+						li(class="breadcrumb")
+							a(class="breadcrumb-link current" href="javascript:void(0)") Товары
+				.app-main-content__container.products
+					.products-container
+							.product-item.dark
+								.product-img-block
+									img(class="product-img", src="img/tov-img1.png", alt="Доступ к еженедельным семинара 50$ - 1 месяц")
+									p(class="product-tooltip")
+										span i
+									.product-tooltip__box Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iure illo ipsum.
+								p(class="product-title") Доступ<br> к еженедельным семинара<br> 50$ - 1 месяц
+								a(class="green-btn active" href="/") Куплен доступ - перейти
+							.product-item.dark
+								.product-img-block
+									img(class="product-img", src="img/tov-img2.png", alt="Доступ в Клуб  инвесторов 1000$ - 1 месяц")
+									p(class="product-tooltip")
+										span i
+									.product-tooltip__box Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iure illo ipsum.
+								p(class="product-title") Доступ в<br> Клуб  инвесторов<br> 1000$ - 1 месяц
+								a(class="green-btn" href="/") Купить
+							.product-item.dark
+								.product-img-block
+									img(class="product-img", src="img/tov-img1.png", alt="Ваш инвестиционный план на 2020 год 1500$ - 1 месяц")
+									p(class="product-tooltip")
+										span i
+									.product-tooltip__box Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iure illo ipsum.
+								p(class="product-title") Ваш инвестиционный<br> план на 2020 год<br> 1500$ - 1 месяц
+								a(class="green-btn" href="/") Купить
+							.product-item.dark
+								.product-img-block
+									img(class="product-img", src="img/tov-img2.png", alt="Групповое обучение “Мир криптовалют” 000$ - 1 месяц")
+									p(class="product-tooltip")
+										span i
+									.product-tooltip__box Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iure illo ipsum.
+								p(class="product-title") Групповое обучение
+									span(class="product-subtitle") “Мир криптовалют”
+									span(class="product-text") 2000$ - 1 месяц
+								a(class="green-btn" href="/") Купить
+							.product-item.dark
+								.product-img-block
+									img(class="product-img", src="img/tov-img1.png", alt="Личный коучинг “Путь начинающего инвестора” 50$ - 1 месяц")
+									p(class="product-tooltip")
+										span i
+									.product-tooltip__box Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iure illo ipsum.
+								p(class="product-title") Личный коучинг
+									span(class="product-subtitle") “Путь начинающего инвестора”
+									span(class="product-text") 250$ - 1 месяц
+								a(class="green-btn" href="/") Купить

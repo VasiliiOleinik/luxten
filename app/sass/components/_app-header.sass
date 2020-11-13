@@ -1,0 +1,79 @@
+.app-header
+	height: 90px
+	display: flex
+	background-color: $dark-head
+	padding: 0px 35px
+
+	& .header__body
+		align-items: center
+
+	& .header__menu
+		display: flex
+		align-items: center
+
+		& .header-info
+			margin-left: 15px
+			font-style: normal
+			font-weight: 500
+			font-size: 14px
+			line-height: 17px
+			letter-spacing: 1px
+			color: #D6B87A
+
+			& span
+				color: #ffffff
+
+		& .header__user
+			margin-left: 30px
+			display: flex
+			align-items: center
+
+			& .user-photo
+				width: 32px
+				height: 32px
+				border-radius: 50%
+				object-fit: cover
+				margin-right: 5px
+
+			& .user-name
+				font-style: normal
+				font-weight: bold
+				font-size: 14px
+				line-height: 17px
+				text-align: right
+				letter-spacing: 1px
+				color: #E2E2E2
+.hamburger,
+.hamburger-label
+	display: none
+@include media( 1199 )
+	.app-header .header__menu .header-info
+		display: none
+	.hamburger
+		display: inline-block
+		vertical-align: middle
+		line-height: 54px
+		padding-right: 0px
+	.hamburger-label
+		display: inline-block
+		vertical-align: middle
+		font-style: normal
+		font-weight: bold
+		font-size: 14px
+		line-height: 17px
+		text-align: right
+		letter-spacing: 1px
+		color: #ffffff
+		margin-right: 10px
+	.hamburger-box
+		display: inline-block
+		vertical-align: middle
+	.hamburger.is-active .hamburger-label
+		color: #D6B87A
+@include media( 767 )
+	.app-header
+		padding: 0px 15px
+	.app-header .header__body
+		justify-content: space-between
+	.app-header .header__menu .header__user
+		display: none

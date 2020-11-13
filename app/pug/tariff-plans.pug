@@ -1,0 +1,58 @@
+extends blocks/_app-layout
+append content
+	main.app-main
+		.main-content
+			include blocks/_left-menu
+			.app-main-content.dark
+				.app-main-content__header
+					h1(class="app-main-content__title") Тарифные планы
+					ul(class="app-breadcrumbs")
+						li(class="breadcrumb")
+							a(href="/" class="breadcrumb-link") Главная
+						li(class="breadcrumb-separator") /
+						li(class="breadcrumb")
+							a(href="javascript:void(0)" class="breadcrumb-link current") Тарифные планы
+				.app-main-content__container.tariffPlans
+					.tariffPlans-container
+						.plan-card.bronze
+							.head-block.dark Тарифный план
+								span(class="plan-title bronze") Bronze
+							.content-block.dark
+								p(class="plan-card__info") Сумма инвестирования:
+									span от 50$ до 10000$.
+								p(class="plan-card__info") Ежемесячный процент:
+									span 7% от суммы инвестиции.
+								p(class="plan-card__info") Срок инвестирования:
+									span 365 дней.
+								p(class="plan-card__info") Сумма инвестиции возвращается:
+									span по истечении 365 дней.
+								a(href="/" class="plan-card-link") Инвестировать по тарифу
+									span BRONZE
+						.plan-card.silver
+							.head-block.dark Тарифный план
+								span(class="plan-title silver") Silver
+							.content-block.dark
+								p(class="plan-card__info") Сумма инвестирования:
+									span от 50$ до 10000$.
+								p(class="plan-card__info") Ежемесячный процент:
+									span 7% от суммы инвестиции.
+								p(class="plan-card__info") Срок инвестирования:
+									span 365 дней.
+								p(class="plan-card__info") Сумма инвестиции возвращается:
+									span по истечении 365 дней.
+								a(href="/" class="plan-card-link") Инвестировать по тарифу
+									span SILVER
+						.plan-card.gold
+							.head-block.dark Тарифный план
+								span(class="plan-title gold") Gold
+							.content-block.dark
+								p(class="plan-card__info") Сумма инвестирования:
+									span от 50$ до 10000$.
+								p(class="plan-card__info") Ежемесячный процент:
+									span 7% от суммы инвестиции.
+								p(class="plan-card__info") Срок инвестирования:
+									span 365 дней.
+								p(class="plan-card__info") Сумма инвестиции возвращается:
+									span по истечении 365 дней.
+								a(href="/" class="plan-card-link") Инвестировать по тарифу
+									span GOLD
